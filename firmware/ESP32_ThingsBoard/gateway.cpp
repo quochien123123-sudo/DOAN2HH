@@ -635,13 +635,52 @@ static void PublishTelemetry(uint32_t now)
     lastUartOnline = masterOnline;
 }
 
+/* Pure mapping kept separate so host tests can check every PubSubClient state. */
+static const char *MqttStateReason(int state)
+{
+    switch (state) {
+        case -4: return "CONNECTION_TIMEOUT";
+        case -3: return "CONNECTION_LOST";
+        case -2: return "CONNECT_FAILED";
+        case -1: return "DISCONNECTED";
+        case 0: return "CONNECTED";
+        case 1: return "BAD_PROTOCOL";
+        case 2: return "BAD_CLIENT_ID";
+        case 3: return "SERVER_UNAVAILABLE";
+        case 4: return "BAD_CREDENTIALS";
+        case 5: return "UNAUTHORIZED";
+        default: return "UNKNOWN_STATE";
+    }
+}
+static const char *ResetReasonName(esp_reset_reason_t reason)
+{
+    switch (reason) {
+        case ESP_RST_POWERON: return "POWERON";
+        case ESP_RST_EXT: return "EXTERNAL";
+        case ESP_RST_SW: return "SOFTWARE";
+        case ESP_RST_PANIC: return "PANIC";
+        case ESP_RST_INT_WDT: return "INTERRUPT_WATCHDOG";
+        case ESP_RST_TASK_WDT: return "TASK_WATCHDOG";
+        case ESP_RST_WDT: return "WATCHDOG";
+        case ESP_RST_DEEPSLEEP: return "DEEP_SLEEP";
+        case ESP_RST_BROWNOUT: return "BROWNOUT";
+        case ESP_RST_SDIO: return "SDIO";
+        default: return "UNKNOWN";
+    }
+}
+static const char *ConfigurationIssue()
+{
+    if (!*THINGSBOARD_TOKEN) return "THINGSBOARD_TOKEN_EMPTY";
+    if (strcmp(THINGSBOARD_TOKEN, "YOUR_DEVICE_ACCESS_TOKEN") == 0)
+        return "THINGSBOARD_TOKEN_TEMPLATE_NOT_REPLACED";
+#if MQTT_USE_TLS
+    if (!*THINGSBOARD_ROOT_CA) return "TLS_ROOT_CA_EMPTY";
+#endif
+    return nullptr;
+}
 static bool ConfigurationReady()
 {
-    if (!*THINGSBOARD_TOKEN) return false;
-#if MQTT_USE_TLS
-    if (!*THINGSBOARD_ROOT_CA) return false;
-#endif
-    return true;
+    return ConfigurationIssue() == nullptr;
 }
 static void NetworkProcess(uint32_t now)
 {
@@ -673,15 +712,41 @@ static void NetworkProcess(uint32_t now)
     char clientId[40];
     snprintf(clientId, sizeof(clientId), "pump-gateway-%08lx-%08lx",
              (unsigned long)(ESP.getEfuseMac() & 0xffffffffU), (unsigned long)gatewaySession);
+    const uint32_t startedAt = millis();
+    Serial.printf("[MQTT] Connecting host=%s port=%u tls=%s rssi=%lddBm heap=%lu minHeap=%lu\n",
+        THINGSBOARD_HOST, (unsigned int)THINGSBOARD_PORT, MQTT_USE_TLS ? "on" : "off",
+        (long)WiFi.RSSI(), (unsigned long)ESP.getFreeHeap(), (unsigned long)ESP.getMinFreeHeap());
     const bool ok = mqtt.connect(clientId, THINGSBOARD_TOKEN, "");
+    const bool subscribed = ok && mqtt.subscribe("v1/devices/me/rpc/request/+", 1);
     const uint32_t endedAt = millis();
-    if (!ok || !mqtt.subscribe("v1/devices/me/rpc/request/+", 1)) {
+    if (!ok || !subscribed) {
+        /* Capture state BEFORE disconnect(), which changes it to DISCONNECTED.
+         * subscribe() reports sending SUBSCRIBE, not broker SUBACK acceptance. */
+        const int failureState = mqtt.state();
+#if MQTT_USE_TLS
+        char tlsText[160] = {};
+        int tlsError = 0;
+        if (!ok && failureState == -2) tlsError = transport.lastError(tlsText, sizeof(tlsText));
+#endif
+        Serial.printf("[MQTT] %s failed state=%d reason=%s elapsedMs=%lu wifiStatus=%d rssi=%lddBm heap=%lu minHeap=%lu\n",
+            ok ? "SUBSCRIBE_WRITE" : "CONNECT", failureState, MqttStateReason(failureState),
+            (unsigned long)(endedAt - startedAt), (int)WiFi.status(), (long)WiFi.RSSI(),
+            (unsigned long)ESP.getFreeHeap(), (unsigned long)ESP.getMinFreeHeap());
+#if MQTT_USE_TLS
+        /* Auth/CONNACK errors never reuse a previous TLS diagnostic. For a
+         * transport failure this is the SDK's last recorded error; DNS failure
+         * can leave it unchanged, so it is a diagnostic rather than proof. */
+        if (tlsError) Serial.printf("[TLS] lastError=%d detail=%s\n", tlsError, tlsText);
+#endif
         mqtt.disconnect();
-        nextMqttAttempt = endedAt + mqttBackoff + (esp_random() % 250U);
+        const uint32_t retryMs = mqttBackoff + (esp_random() % 250U);
+        nextMqttAttempt = endedAt + retryMs;
         mqttBackoff = mqttBackoff < 15000U ? mqttBackoff * 2U : 30000U;
-        Serial.println("[MQTT] Retry scheduled; UART remains serviced");
+        Serial.printf("[MQTT] Retry in %lu ms; UART remains serviced\n", (unsigned long)retryMs);
         return;
     }
+    Serial.printf("[MQTT] CONNECT and SUBSCRIBE_WRITE succeeded elapsedMs=%lu\n",
+        (unsigned long)(endedAt - startedAt));
     mqttBackoff = 1000;
     nextMqttAttempt = endedAt;
     lastTelemetryAt = endedAt - 1000U;
@@ -693,6 +758,10 @@ static void NetworkProcess(uint32_t now)
 void GatewaySetup()
 {
     Serial.begin(115200);
+    const esp_reset_reason_t resetReason = esp_reset_reason();
+    Serial.printf("[BOOT] baud=115200 reset=%s(%d) heap=%lu minHeap=%lu\n",
+        ResetReasonName(resetReason), (int)resetReason,
+        (unsigned long)ESP.getFreeHeap(), (unsigned long)ESP.getMinFreeHeap());
     stateMutex = xSemaphoreCreateMutex();
     commandQueue = xQueueCreate(6, sizeof(Command));
     completionQueue = xQueueCreate(16, sizeof(Completion));
@@ -726,8 +795,10 @@ void GatewaySetup()
     transport.setHandshakeTimeout(8);
 #endif
     configReady = ConfigurationReady();
-    if (!configReady)
-        Serial.println("[CONFIG] WiFi portal/UART enabled. Set ThingsBoard token and trusted TLS CA to enable MQTT.");
+    Serial.printf("[CONFIG] MQTT host=%s port=%u tls=%s token=%s\n", THINGSBOARD_HOST,
+        (unsigned int)THINGSBOARD_PORT, MQTT_USE_TLS ? "on" : "off",
+        !*THINGSBOARD_TOKEN ? "empty" : (strcmp(THINGSBOARD_TOKEN, "YOUR_DEVICE_ACCESS_TOKEN") == 0 ? "template" : "configured"));
+    if (!configReady) Serial.printf("[CONFIG] MQTT disabled reason=%s; WiFi portal/UART enabled\n", ConfigurationIssue());
     if (xTaskCreatePinnedToCore(WiFiTask, "wifi-portal", 8192, nullptr, 1, nullptr, 0) != pdPASS) {
         Serial.println("[FATAL] Cannot start WiFi provisioning task");
         for (;;) delay(1000);

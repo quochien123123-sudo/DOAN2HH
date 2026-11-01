@@ -22,7 +22,7 @@
     "firmware.bin": "0x10000"
   },
   "source_sha256": {
-    "gateway.cpp": "1ceb8d2fab43952a5e5297fbf8b8931a5a909ceb9d0705c1ded3e758477cd1c5",
+    "gateway.cpp": "6bd89e45008031abaee15b8bf6cbcafc1212a18d2250aa818756bca058cc0170",
     "config.h": "219d0d9d2e2cdc4468701be55f34ded3885e306ff8485473d0fb02c6ae52b32f",
     "protocol.h": "b9fe1e9fae2df77ac0b348038047b36e5fd9f8c397e6066929d43242bab98ddc",
     "trusted_roots.h": "abb9cfa4d60913b14fede12c433a38d9ab248695e33c875c4cf5c5e8af5221c4",
@@ -32,8 +32,8 @@
   "artifact_sha256": {
     "boot_app0.bin": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
     "bootloader.bin": "3d234a7471f67b013686dabd4dee7c1fa915c9928463616a94bc9297acf1abf8",
-    "factory.bin": "b3c76a6d362a4a7dbc855b6640ad579fa6190c8722806fb8d0e84bf553c72bf4",
-    "firmware.bin": "9f5f3797619885fb617f2d229ff35bfc620dec07e6b9ebe29795ef16bce4e8c1",
+    "factory.bin": "72121de6d8e656b7e3b1742707c971b197317e097a2ba8b55e6f2bb5bde57863",
+    "firmware.bin": "e62d4c67f49de01948870af8ddffda88c2374cfd0cb51d78741c08166d8618d3",
     "partitions.bin": "148b959cbff1c38aa8e1d5c0ba9d612c54997b945e56a63f41223eef650653a1"
   }
 }

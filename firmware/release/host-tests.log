@@ -35,4 +35,5 @@ PASS SPI/FIFO failure aborts, never falsely accepted as TX
 PASS TX deadline is bounded at 500ms
 PASS radio brownout/config mismatch detected; total SPI calls 302
 Gateway parser: nodes1..3, strict framing/ranges, freshness, session/ID/node, Master reboot cancellation+relay retention: PASS
+MQTT diagnostics: all PubSubClient states and five token/TLS configurations: PASS
 All selected host tests completed. Physical hardware/RF/cloud tests are separate.

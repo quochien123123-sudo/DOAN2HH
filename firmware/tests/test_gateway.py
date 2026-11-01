@@ -133,3 +133,52 @@ with tempfile.TemporaryDirectory(prefix='gateway-parser-') as directory:
     subprocess.run([os.environ.get('CXX', 'g++'), '-std=c++17', '-Wall', '-Wextra', '-Werror',
                     '-O0', '-g', '-fsanitize=address,undefined', str(cpp), '-o', str(executable)], check=True)
     subprocess.run([str(executable)], env={**os.environ, 'ASAN_OPTIONS': 'detect_leaks=0'}, check=True)
+
+# Compile the exact diagnostic helpers from gateway.cpp under every private
+# configuration state. This checks the operator-facing reason without putting
+# a real device token in a test binary or log.
+diagnostic_items = extract('static const char *MqttStateReason(') + '\n' + extract('static const char *ConfigurationIssue()')
+diagnostic_checks = r'''
+int main() {
+    const char *expected[] = {
+        "CONNECTION_TIMEOUT", "CONNECTION_LOST", "CONNECT_FAILED", "DISCONNECTED",
+        "CONNECTED", "BAD_PROTOCOL", "BAD_CLIENT_ID", "SERVER_UNAVAILABLE",
+        "BAD_CREDENTIALS", "UNAUTHORIZED"
+    };
+    for (int state = -4; state <= 5; ++state)
+        assert(strcmp(MqttStateReason(state), expected[state + 4]) == 0);
+    assert(strcmp(MqttStateReason(99), "UNKNOWN_STATE") == 0);
+    const char *issue = ConfigurationIssue();
+#if EXPECT_ISSUE
+    assert(issue && strcmp(issue, EXPECTED_ISSUE) == 0);
+#else
+    assert(issue == nullptr);
+#endif
+}
+'''
+scenarios = [
+    ('empty-token', '', 'public-root', 1, 'THINGSBOARD_TOKEN_EMPTY'),
+    ('template-token', 'YOUR_DEVICE_ACCESS_TOKEN', 'public-root', 1, 'THINGSBOARD_TOKEN_TEMPLATE_NOT_REPLACED'),
+    ('empty-ca', 'test-device-token', '', 1, 'TLS_ROOT_CA_EMPTY'),
+    ('valid-tls', 'test-device-token', 'public-root', 1, None),
+    ('valid-plaintext', 'test-device-token', '', 0, None),
+]
+with tempfile.TemporaryDirectory(prefix='mqtt-diagnostics-') as directory:
+    path = Path(directory)
+    for name, token, root_ca, use_tls, issue in scenarios:
+        cpp = path / (name + '.cpp')
+        defines = [
+            '#include <assert.h>',
+            '#include <string.h>',
+            '#define THINGSBOARD_TOKEN ' + repr(token).replace("'", '"'),
+            '#define THINGSBOARD_ROOT_CA ' + repr(root_ca).replace("'", '"'),
+            '#define MQTT_USE_TLS ' + str(use_tls),
+            '#define EXPECT_ISSUE ' + ('1' if issue else '0'),
+            '#define EXPECTED_ISSUE ' + (repr(issue).replace("'", '"') if issue else '""'),
+        ]
+        cpp.write_text('\n'.join(defines) + '\n' + diagnostic_items + diagnostic_checks)
+        executable = path / name
+        subprocess.run([os.environ.get('CXX', 'g++'), '-std=c++17', '-Wall', '-Wextra', '-Werror',
+                        str(cpp), '-o', str(executable)], check=True)
+        subprocess.run([str(executable)], check=True)
+print('MQTT diagnostics: all PubSubClient states and five token/TLS configurations: PASS')

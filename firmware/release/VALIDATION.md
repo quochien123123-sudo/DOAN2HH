@@ -11,7 +11,7 @@ không phải các firmware cũ trong hai tệp RAR.
 | Slave1 | ARM GCC7.3.1 20180622 |17.724B /63.488B|2.344B /20.480B|
 | Slave2 | ARM GCC7.3.1 20180622 |17.720B /63.488B|2.344B /20.480B|
 | Slave3 | ARM GCC7.3.1 20180622 |17.708B /63.488B|2.344B /20.480B|
-| DOIT ESP32 DEVKIT V1 | Xtensa GCC8.4.0, Arduino-ESP32 2.0.17 |1.035.061B /1.310.720B|48.540B /327.680B|
+| DOIT ESP32 DEVKIT V1 | Xtensa GCC8.4.0, Arduino-ESP32 2.0.17 |1.036.561B /1.310.720B|48.540B /327.680B|
 
 Không có compiler warning trong các build cuối. STM32 application dùng
 -Wall/-Wextra/-Werror; syscalls.c do ST sinh sẵn chỉ tắt cảnh báo unused-parameter.
@@ -77,3 +77,16 @@ HAL lỗi, địa chỉ0x27/0x3F, init/write sequence, tick wrap và không có 
 đạt. Build lại4target STM32 đạt, không cảnh báo. ESP32 WiFiManager không đổi.
 Những kiểm tra này chứng minh các đường lỗi trong mã; chưa xác nhận nguyên
 nhân phần cứng trên màn hình của người dùng hoặc thử LCD thật sau bản sửa.
+
+## Chẩn đoán ThingsBoard Cloud — 01/11/2026
+
+ESP32 giữ endpoint `mqtt.thingsboard.cloud:8883`, TLS xác minh CA và Device
+Access Token làm MQTT username. Firmware hiện ghi nguyên nhân reset, endpoint,
+RSSI, heap, thời gian thử, mã/trạng thái PubSubClient và lỗi tầng TLS khi có;
+không ghi giá trị token. Lịch retry vẫn để task UART hoạt động độc lập.
+
+Đã build lại đúng `esp32doit-devkit-v1`: Flash1.036.561/1.310.720B (79,1%),
+RAM tĩnh48.540/327.680B (14,8%), không có cảnh báo. Host test biên dịch trực
+tiếp các helper chẩn đoán trong `gateway.cpp`, kiểm tra đủ state -4..5 và năm
+tình huống token/TLS. Chưa dùng token thật hoặc kết nối broker từ phần kiểm tra
+này; người dùng cần nạp lên ESP32 và gửi dòng lỗi mới để xác định sự cố mạng.

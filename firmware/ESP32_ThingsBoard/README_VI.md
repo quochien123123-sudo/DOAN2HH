@@ -41,9 +41,12 @@ mạng; thao tác web/DNS/TLS không giữ vòng nhận UART.
 ## Cấu hình ThingsBoard
 
 1. Chép `secrets.h.example` thành `secrets.h`.
-2. Điền **THINGSBOARD_TOKEN** (device access token) và hostname nếu cần.
+2. Điền **THINGSBOARD_TOKEN** bằng **Device Access Token** của thiết bị trên
+   ThingsBoard, không dùng mật khẩu tài khoản hoặc Personal Access Token.
    Wi-Fi cấu hình qua portal D27, không nhập SSID/password vào file này.
-3. Giữ `MQTT_USE_TLS 1`, cổng 8883. Gói đã kèm root CA công khai
+3. Với ThingsBoard Cloud, giao diện web là `thingsboard.cloud` nhưng MQTT broker
+   là **`mqtt.thingsboard.cloud`**. Giữ `MQTT_USE_TLS 1`, cổng **8883**. Gói đã
+   kèm root CA công khai
    (xem `TRUSTED_ROOTS.txt`); nếu endpoint dùng chuỗi CA khác, ghi đè
    `THINGSBOARD_ROOT_CA` bằng PEM từ nguồn chính thức.
 4. ESP32 dùng SNTP để kiểm tra thời hạn chứng chỉ. Nếu mạng chặn NTP,
@@ -53,6 +56,21 @@ Thiếu token ThingsBoard vẫn mở WiFiManager và phục vụ UART; kết n�
 bắt đầu khi cấu hình token/TLS hợp lệ. Không có thông tin đăng nhập thật trong
 mã nguồn. `secrets.h` được gitignore. Muốn thử MQTT plaintext trên bàn, chủ động
 chọn `MQTT_USE_TLS 0` và cổng 1883; không dùng `setInsecure()`.
+
+Serial Monitor phải đặt **115200 baud**. Mỗi lần thử MQTT, firmware mới in host,
+cổng, TLS, RSSI, bộ nhớ, thời gian chờ và mã lỗi mà không in token. Một số mã
+thường gặp:
+
+- `state=4 BAD_CREDENTIALS` hoặc `state=5 UNAUTHORIZED`: kiểm tra lại Device
+  Access Token của đúng thiết bị.
+- `state=-2 CONNECT_FAILED`: xem dòng `[TLS] lastError=...`; kiểm tra Internet,
+  DNS, cổng 8883, thời gian SNTP và CA.
+- `state=-4 CONNECTION_TIMEOUT`: broker không trả lời trong thời gian chờ;
+  kiểm tra mạng có chặn TCP 8883 hay không.
+
+Thông báo `[TLS] Waiting for SNTP time` nghĩa là ESP32 chưa có giờ tin cậy để
+xác minh chứng chỉ. Dòng `[MQTT] Retry in ...` chỉ là lịch thử lại; UART với
+STM32 vẫn được phục vụ trong lúc đó.
 
 ## RPC trên dashboard
 
