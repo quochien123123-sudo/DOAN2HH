@@ -1,0 +1,8 @@
+.pio/
+.tools/
+build/
+__pycache__/
+**/__pycache__/
+ESP32_ThingsBoard/secrets.h
+**/Debug/
+**/Release/

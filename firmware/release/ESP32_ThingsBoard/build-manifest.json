@@ -1,0 +1,37 @@
+{
+  "board": "esp32doit-devkit-v1 (DOIT ESP32 DevKit V1, 4MB, DIO40MHz)",
+  "environment": "devkitv1",
+  "partition_layout": "default.csv",
+  "physical_flash_bytes": 4194304,
+  "application_partition_bytes": 1310720,
+  "arduino_esp32": "2.0.17",
+  "platformio": "6.1.18",
+  "platform": "6.10.0",
+  "compiler": "xtensa-esp32-elf GCC8.4.0 esp-2021r2-patch5",
+  "libraries": {
+    "PubSubClient": "2.8",
+    "ArduinoJson": "7.3.1"
+  },
+  "private_config_present": false,
+  "factory_flash_address": "0x0",
+  "parts": {
+    "bootloader.bin": "0x1000",
+    "partitions.bin": "0x8000",
+    "boot_app0.bin": "0xe000",
+    "firmware.bin": "0x10000"
+  },
+  "source_sha256": {
+    "gateway.cpp": "0a3a36bf57d691f5df9a50aa5cbb0018acf65d7552da1759f140c700d5ffe75b",
+    "config.h": "12d86af82606a40e7eb0ff3eee1cd135072b09714df94daad2128ff45dc612b6",
+    "protocol.h": "b9fe1e9fae2df77ac0b348038047b36e5fd9f8c397e6066929d43242bab98ddc",
+    "trusted_roots.h": "abb9cfa4d60913b14fede12c433a38d9ab248695e33c875c4cf5c5e8af5221c4",
+    "ESP32_ThingsBoard.ino": "6e79f59e02284c72ad51bc58b6f32b0bc6e11d53174702613330d380915e89e2"
+  },
+  "artifact_sha256": {
+    "boot_app0.bin": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
+    "bootloader.bin": "3d234a7471f67b013686dabd4dee7c1fa915c9928463616a94bc9297acf1abf8",
+    "factory.bin": "cf4cbea746187392d0b037e738bc5a665122bfe207572e2e7aae47e9cd3a7a5c",
+    "firmware.bin": "8af703afbeb6a90d9e068b3bcfc0ac03d122f63cc51f6e20c9af0dcf1cb7a3e5",
+    "partitions.bin": "148b959cbff1c38aa8e1d5c0ba9d612c54997b945e56a63f41223eef650653a1"
+  }
+}

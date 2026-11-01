@@ -1,0 +1,30 @@
+arm-none-eabi-gcc (xPack GNU ARM Embedded GCC, 64-bit) 7.3.1 20180622 (release) [ARM/embedded-7-branch revision 261907]
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Master: full build 27 translation units, jobs=4
+Memory region         Used Size  Region Size  %age Used
+             RAM:        4040 B        20 KB     19.73%
+           FLASH:       17044 B        62 KB     26.85%
+   text	   data	    bss	    dec	    hex	filename
+  16908	    136	   3912	  20956	   51dc	/workspace/DOAN2HH/firmware/build/Master/Master.elf
+Slave1: full build 29 translation units, jobs=4
+Memory region         Used Size  Region Size  %age Used
+             RAM:        2344 B        20 KB     11.45%
+           FLASH:       17672 B        62 KB     27.84%
+   text	   data	    bss	    dec	    hex	filename
+  17552	    120	   2232	  19904	   4dc0	/workspace/DOAN2HH/firmware/build/Slave1/Slave1.elf
+Slave2: full build 29 translation units, jobs=4
+Memory region         Used Size  Region Size  %age Used
+             RAM:        2344 B        20 KB     11.45%
+           FLASH:       17668 B        62 KB     27.83%
+   text	   data	    bss	    dec	    hex	filename
+  17548	    120	   2232	  19900	   4dbc	/workspace/DOAN2HH/firmware/build/Slave2/Slave2.elf
+Slave3: full build 29 translation units, jobs=4
+Memory region         Used Size  Region Size  %age Used
+             RAM:        2344 B        20 KB     11.45%
+           FLASH:       17656 B        62 KB     27.81%
+   text	   data	    bss	    dec	    hex	filename
+  17536	    120	   2232	  19888	   4db0	/workspace/DOAN2HH/firmware/build/Slave3/Slave3.elf
+Build complete. STM32 flash base 0x08000000; last 2KiB reserved for boot counter.
