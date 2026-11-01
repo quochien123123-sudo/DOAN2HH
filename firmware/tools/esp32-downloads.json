@@ -1,8 +1,46 @@
 {
-  "core": {"filename":"esp32-2.0.17.zip","url":"https://github.com/espressif/arduino-esp32/releases/download/2.0.17/esp32-2.0.17.zip","sha256":"1f8658d4b18a8001ce782142ad08164af2991d70b83a147c3437a6ee30a9b225","checksum_source":"Espressif Arduino package index, 2.0.17"},
-  "toolchain": {"filename":"xtensa.tar.gz","url":"https://github.com/espressif/crosstool-NG/releases/download/esp-2021r2-patch5/xtensa-esp32-elf-gcc8_4_0-esp-2021r2-patch5-linux-amd64.tar.gz","sha256":"8ef14e0409c2011b41e504a30f70d3e35287313a795d1f2462ad2cd0e2052d37","checksum_source":"Espressif Arduino package index, toolchain esp-2021r2-patch5-8.4.0 Linux amd64"},
-  "esptool": {"filename":"esptool.tar.gz","url":"https://github.com/espressif/arduino-esp32/releases/download/2.0.7/esptool-v4.5.1-src.tar.gz","sha256":"aa06831a7d88d8ccde4ea21241e983a08dbdae967290e181658b0d18bffc8f86","checksum_source":"Espressif Arduino package index, esptool 4.5.1 Linux"},
-  "platform": {"filename":"platform.tar.gz","url":"https://github.com/platformio/platform-espressif32/archive/refs/tags/v6.10.0.tar.gz","sha256":"f3272f378ffaa0954b9130d14c66d0756cb9bbcd269bca01896e967a4a397255","checksum_source":"Pinned SHA256 observed from official GitHub v6.10.0 tag archive over verified HTTPS"},
-  "pubsub": {"filename":"pubsub.tar.gz","url":"https://github.com/knolleary/pubsubclient/archive/refs/tags/v2.8.tar.gz","sha256":"f94bdfdc62bddaf89fcb680986ee3691369660f2fa7751d9414370c6d1c83b3d","checksum_source":"Pinned SHA256 observed from official GitHub v2.8 tag archive over verified HTTPS"},
-  "arduinojson": {"filename":"arduinojson.tar.gz","url":"https://github.com/bblanchon/ArduinoJson/archive/refs/tags/v7.3.1.tar.gz","sha256":"1b00fad9bd2b86ff9814d3e0e393fee1dbf0f37ac07f1181b41bc503e6a3b1a2","checksum_source":"Pinned SHA256 observed from official GitHub v7.3.1 tag archive over verified HTTPS"}
+  "core": {
+    "filename": "esp32-2.0.17.zip",
+    "url": "https://github.com/espressif/arduino-esp32/releases/download/2.0.17/esp32-2.0.17.zip",
+    "sha256": "1f8658d4b18a8001ce782142ad08164af2991d70b83a147c3437a6ee30a9b225",
+    "checksum_source": "Espressif Arduino package index, 2.0.17"
+  },
+  "toolchain": {
+    "filename": "xtensa.tar.gz",
+    "url": "https://github.com/espressif/crosstool-NG/releases/download/esp-2021r2-patch5/xtensa-esp32-elf-gcc8_4_0-esp-2021r2-patch5-linux-amd64.tar.gz",
+    "sha256": "8ef14e0409c2011b41e504a30f70d3e35287313a795d1f2462ad2cd0e2052d37",
+    "checksum_source": "Espressif Arduino package index, toolchain esp-2021r2-patch5-8.4.0 Linux amd64"
+  },
+  "esptool": {
+    "filename": "esptool.tar.gz",
+    "url": "https://github.com/espressif/arduino-esp32/releases/download/2.0.7/esptool-v4.5.1-src.tar.gz",
+    "sha256": "aa06831a7d88d8ccde4ea21241e983a08dbdae967290e181658b0d18bffc8f86",
+    "checksum_source": "Espressif Arduino package index, esptool 4.5.1 Linux"
+  },
+  "platform": {
+    "filename": "platform.tar.gz",
+    "url": "https://github.com/platformio/platform-espressif32/archive/refs/tags/v6.10.0.tar.gz",
+    "sha256": "f3272f378ffaa0954b9130d14c66d0756cb9bbcd269bca01896e967a4a397255",
+    "checksum_source": "Pinned SHA256 observed from official GitHub v6.10.0 tag archive over verified HTTPS"
+  },
+  "pubsub": {
+    "filename": "pubsub.tar.gz",
+    "url": "https://github.com/knolleary/pubsubclient/archive/refs/tags/v2.8.tar.gz",
+    "sha256": "f94bdfdc62bddaf89fcb680986ee3691369660f2fa7751d9414370c6d1c83b3d",
+    "checksum_source": "Pinned SHA256 observed from official GitHub v2.8 tag archive over verified HTTPS"
+  },
+  "arduinojson": {
+    "filename": "arduinojson.tar.gz",
+    "url": "https://github.com/bblanchon/ArduinoJson/archive/refs/tags/v7.3.1.tar.gz",
+    "sha256": "1b00fad9bd2b86ff9814d3e0e393fee1dbf0f37ac07f1181b41bc503e6a3b1a2",
+    "checksum_source": "Pinned SHA256 observed from official GitHub v7.3.1 tag archive over verified HTTPS"
+  },
+  "wifimanager": {
+    "filename": "wifimanager-v2.0.17.tar.gz",
+    "url": "https://github.com/tzapu/WiFiManager/archive/refs/tags/v2.0.17.tar.gz",
+    "sha256": "8a5c91ff2555c73e8df35c31a502d6e0259636a1c4671df609bb3aed8f7ebf1a",
+    "checksum_source": "Pinned SHA256 observed from official GitHub v2.0.17 tag archive over verified HTTPS",
+    "git_tag": "v2.0.17",
+    "git_commit": "d82d0a1b9fca741b9ec44accdf553606a6576dda"
+  }
 }

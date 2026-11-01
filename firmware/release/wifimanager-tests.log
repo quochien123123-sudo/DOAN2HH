@@ -1,0 +1,7 @@
+Gateway parser: nodes1..3, strict framing/ranges, freshness, session/ID/node, Master reboot cancellation+relay retention: PASS
+PASS 4999 ms does not open portal; 5000 ms opens exactly once while held
+PASS holding/release bounce cannot repeat; stable release permits next long press
+PASS separate short presses do not accumulate toward the five-second hold
+PASS press-edge bounce restarts debounce and hold timing
+PASS timing across millis() wrap
+PASS button already held at boot uses the same five-second threshold

@@ -12,13 +12,13 @@ PACKAGES:
 Converting ESP32_ThingsBoard.ino
 LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
 LDF Modes: Finder ~ chain, Compatibility ~ soft
-Found 35 compatible libraries
+Found 36 compatible libraries
 Scanning dependencies...
 Dependency Graph
 |-- ArduinoJson @ 7.3.1
 |-- PubSubClient @ 2.8
-|-- WiFi @ 2.0.0
 |-- WiFiClientSecure @ 2.0.0
+|-- WiFiManager @ 2.0.17
 Building in release mode
 Compiling .pio/build/devkitv1/src/ESP32_ThingsBoard.ino.cpp.o
 Compiling .pio/build/devkitv1/src/gateway.cpp.o
@@ -43,17 +43,37 @@ Compiling .pio/build/devkitv1/lib942/WiFi/WiFiUdp.cpp.o
 Compiling .pio/build/devkitv1/libd12/WiFiClientSecure/WiFiClientSecure.cpp.o
 Compiling .pio/build/devkitv1/libd12/WiFiClientSecure/esp_crt_bundle.c.o
 Compiling .pio/build/devkitv1/libd12/WiFiClientSecure/ssl_client.cpp.o
-Compiling .pio/build/devkitv1/FrameworkArduino/Esp.cpp.o
+Compiling .pio/build/devkitv1/lib7e2/DNSServer/DNSServer.cpp.o
 Archiving .pio/build/devkitv1/lib942/libWiFi.a
 Indexing .pio/build/devkitv1/lib942/libWiFi.a
+Compiling .pio/build/devkitv1/libcdd/ESPmDNS/ESPmDNS.cpp.o
+Compiling .pio/build/devkitv1/libd92/Update/HttpsOTAUpdate.cpp.o
+Archiving .pio/build/devkitv1/lib7e2/libDNSServer.a
+Indexing .pio/build/devkitv1/lib7e2/libDNSServer.a
+Compiling .pio/build/devkitv1/libd92/Update/Updater.cpp.o
+Compiling .pio/build/devkitv1/libd0c/FS/FS.cpp.o
+Archiving .pio/build/devkitv1/libd12/libWiFiClientSecure.a
+Indexing .pio/build/devkitv1/libd12/libWiFiClientSecure.a
+Compiling .pio/build/devkitv1/libd0c/FS/vfs_api.cpp.o
+Archiving .pio/build/devkitv1/libcdd/libESPmDNS.a
+Indexing .pio/build/devkitv1/libcdd/libESPmDNS.a
+Compiling .pio/build/devkitv1/lib107/WebServer/Parsing.cpp.o
+Archiving .pio/build/devkitv1/libd92/libUpdate.a
+Indexing .pio/build/devkitv1/libd92/libUpdate.a
+Compiling .pio/build/devkitv1/lib107/WebServer/WebServer.cpp.o
+Compiling .pio/build/devkitv1/lib107/WebServer/detail/mimetable.cpp.o
+Compiling .pio/build/devkitv1/lib4b7/WiFiManager/WiFiManager.cpp.o
+Archiving .pio/build/devkitv1/libd0c/libFS.a
+Indexing .pio/build/devkitv1/libd0c/libFS.a
+Compiling .pio/build/devkitv1/FrameworkArduino/Esp.cpp.o
 Compiling .pio/build/devkitv1/FrameworkArduino/FirmwareMSC.cpp.o
 Compiling .pio/build/devkitv1/FrameworkArduino/FunctionalInterrupt.cpp.o
 Compiling .pio/build/devkitv1/FrameworkArduino/HWCDC.cpp.o
 Compiling .pio/build/devkitv1/FrameworkArduino/HardwareSerial.cpp.o
 Compiling .pio/build/devkitv1/FrameworkArduino/IPAddress.cpp.o
+Archiving .pio/build/devkitv1/lib107/libWebServer.a
+Indexing .pio/build/devkitv1/lib107/libWebServer.a
 Compiling .pio/build/devkitv1/FrameworkArduino/IPv6Address.cpp.o
-Archiving .pio/build/devkitv1/libd12/libWiFiClientSecure.a
-Indexing .pio/build/devkitv1/libd12/libWiFiClientSecure.a
 Compiling .pio/build/devkitv1/FrameworkArduino/MD5Builder.cpp.o
 Compiling .pio/build/devkitv1/FrameworkArduino/Print.cpp.o
 Compiling .pio/build/devkitv1/FrameworkArduino/Stream.cpp.o
@@ -73,6 +93,8 @@ Compiling .pio/build/devkitv1/FrameworkArduino/esp32-hal-dac.c.o
 Compiling .pio/build/devkitv1/FrameworkArduino/esp32-hal-gpio.c.o
 Compiling .pio/build/devkitv1/FrameworkArduino/esp32-hal-i2c-slave.c.o
 Compiling .pio/build/devkitv1/FrameworkArduino/esp32-hal-i2c.c.o
+Archiving .pio/build/devkitv1/lib4b7/libWiFiManager.a
+Indexing .pio/build/devkitv1/lib4b7/libWiFiManager.a
 Compiling .pio/build/devkitv1/FrameworkArduino/esp32-hal-ledc.c.o
 Compiling .pio/build/devkitv1/FrameworkArduino/esp32-hal-matrix.c.o
 Compiling .pio/build/devkitv1/FrameworkArduino/esp32-hal-misc.c.o
@@ -99,11 +121,11 @@ Linking .pio/build/devkitv1/firmware.elf
 Retrieving maximum program size .pio/build/devkitv1/firmware.elf
 Checking size .pio/build/devkitv1/firmware.elf
 Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
-RAM:   [=         ]  14.5% (used 47564 bytes from 327680 bytes)
-Flash: [=======   ]  68.9% (used 902957 bytes from 1310720 bytes)
+RAM:   [=         ]  14.8% (used 48540 bytes from 327680 bytes)
+Flash: [========  ]  79.0% (used 1035061 bytes from 1310720 bytes)
 Building .pio/build/devkitv1/firmware.bin
 esptool.py v4.5.1
 Creating esp32 image...
 Merged 27 ELF sections
 Successfully created esp32 image.
-========================= [SUCCESS] Took 9.04 seconds =========================
+========================= [SUCCESS] Took 6.98 seconds =========================

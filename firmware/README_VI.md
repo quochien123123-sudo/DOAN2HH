@@ -93,18 +93,27 @@ Output `build/Master`, `build/Slave1`, `build/Slave2`, `build/Slave3` có ELF/BI
 ### Cấu hình Wi-Fi và ThingsBoard
 
 1. Chép `ESP32_ThingsBoard/secrets.h.example` thành `secrets.h` trong cùng thư mục.
-2. Điền `WIFI_SSID`, `WIFI_PASSWORD`, `THINGSBOARD_TOKEN`.
+2. Điền `THINGSBOARD_TOKEN`; SSID/mật khẩu Wi-Fi được cấu hình bằng WiFiManager, không ghi trong mã.
 3. Mặc định dùng TLS cổng 8883 và tập public root CA đi kèm. Nếu endpoint dùng CA khác, đặt PEM tin cậy trong `THINGSBOARD_ROOT_CA`; không tắt xác minh TLS. ESP32 cần truy cập SNTP để đồng bộ thời gian.
 
-Không có mật khẩu/token thật trong gói. **File ESP32 build sẵn dùng cấu hình trống:** nạp được để chạy UART/chẩn đoán, nhưng để kết nối mạng của bạn cần điền cấu hình và build lại.
+Nút cấu hình Wi-Fi: nối **D27 (GPIO27) với GND** qua nút nhấn, dùng kéo lên nội.
+Lần đầu chưa có mạng lưu, hoặc khi **giữ D27 trong 5 giây**, ESP32 mở AP
+**`Pump-Setup-xxxxxx`**, mật khẩu mặc định **`PumpSetup27`**. Kết nối AP rồi mở
+**http://192.168.4.1** → Configure WiFi → nhập mạng/mật khẩu → Save. ESP32 lưu
+thông tin Wi-Fi và tự dùng lại sau khởi động; portal hết khoảng 180 giây sẽ đóng.
+Giữ nút không xóa cấu hình, không reset thiết bị và không đổi relay.
+
+Không có mật khẩu/token thật trong gói. File ESP32 build sẵn cấu hình Wi-Fi
+được bằng D27 và vẫn xử lý UART; để gửi ThingsBoard, điền token vào `secrets.h`
+rồi build lại. Wi-Fi không còn cần nhập trong mã.
 
 ### Arduino IDE
 
-Mở **`ESP32_ThingsBoard/ESP32_ThingsBoard.ino`**, giữ nguyên `gateway.cpp`, `config.h`, `trusted_roots.h` và các tệp trong cùng thư mục. `.ino` gọi phần ứng dụng trong `gateway.cpp`; không chỉ chép nội dung `.ino` riêng lẻ.
+Mở **`ESP32_ThingsBoard/ESP32_ThingsBoard.ino`**, giữ nguyên `gateway.cpp`, `config.h`, `trusted_roots.h`, `wifi_button.h` và các tệp trong cùng thư mục. `.ino` gọi phần ứng dụng trong `gateway.cpp`; không chỉ chép nội dung `.ino` riêng lẻ.
 
 - Board package: **esp32 by Espressif Systems 2.0.17**.
 - Board: **DOIT ESP32 DEVKIT V1**; Flash 4 MB, mặc định partition có app khoảng 1,3 MB; DIO 40 MHz.
-- Library Manager: **PubSubClient 2.8**, **ArduinoJson 7.3.1**.
+- Library Manager: **PubSubClient 2.8**, **ArduinoJson 7.3.1**, **WiFiManager by tzapu 2.0.17**.
 - Chọn cổng USB, Verify rồi Upload. Serial Monitor 115200.
 
 ### PlatformIO
@@ -162,7 +171,8 @@ Xem thêm `ESP32_ThingsBoard/README_VI.md`. Cache RPC RAM giữ tối đa 16 yê
 4. Khi relay đang ON rồi OFF, lần lượt ngắt RF/ESP32/Wi-Fi: đầu ra phải giữ nguyên. Kết nối lại phải đồng bộ trạng thái, không tự chạy lệnh cũ.
 5. Thử nút tại Slave khi một lệnh đang chờ; kết quả có thể CONFLICT/OVERRIDDEN, không thực thi lại lệnh cũ để ghi đè thao tác tại chỗ.
 6. Reset Master giữa lệnh: lệnh cũ không được tự gửi lại sang phiên mới. Reset Slave vẫn đi qua boot OFF theo thiết kế.
-7. Rút SHT30/LCD: relay/heartbeat vẫn hoạt động, dữ liệu lỗi có cờ valid; ADC lỗi không biến thành đất ẩm 100%.
+7. Giữ D27 dưới 5 giây không mở portal; giữ đủ 5 giây mở đúng một lần, UART vẫn cập nhật. Lưu Wi-Fi và reset ESP32 để kiểm tra dùng lại mạng đã lưu.
+8. Rút SHT30/LCD: relay/heartbeat vẫn hoạt động, dữ liệu lỗi có cờ valid; ADC lỗi không biến thành đất ẩm 100%.
 
 Kiểm tra logic trên host (cần gcc/g++, Python; boot journal test dùng Linux):
 

@@ -10,7 +10,8 @@
   "compiler": "xtensa-esp32-elf GCC8.4.0 esp-2021r2-patch5",
   "libraries": {
     "PubSubClient": "2.8",
-    "ArduinoJson": "7.3.1"
+    "ArduinoJson": "7.3.1",
+    "WiFiManager": "2.0.17"
   },
   "private_config_present": false,
   "factory_flash_address": "0x0",
@@ -21,17 +22,18 @@
     "firmware.bin": "0x10000"
   },
   "source_sha256": {
-    "gateway.cpp": "0a3a36bf57d691f5df9a50aa5cbb0018acf65d7552da1759f140c700d5ffe75b",
-    "config.h": "12d86af82606a40e7eb0ff3eee1cd135072b09714df94daad2128ff45dc612b6",
+    "gateway.cpp": "1ceb8d2fab43952a5e5297fbf8b8931a5a909ceb9d0705c1ded3e758477cd1c5",
+    "config.h": "219d0d9d2e2cdc4468701be55f34ded3885e306ff8485473d0fb02c6ae52b32f",
     "protocol.h": "b9fe1e9fae2df77ac0b348038047b36e5fd9f8c397e6066929d43242bab98ddc",
     "trusted_roots.h": "abb9cfa4d60913b14fede12c433a38d9ab248695e33c875c4cf5c5e8af5221c4",
+    "wifi_button.h": "d34562d5fe9fd3904a2bb62187a28e6ad2f63d4ab2d78383bfdbeb444e0907b1",
     "ESP32_ThingsBoard.ino": "6e79f59e02284c72ad51bc58b6f32b0bc6e11d53174702613330d380915e89e2"
   },
   "artifact_sha256": {
     "boot_app0.bin": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
     "bootloader.bin": "3d234a7471f67b013686dabd4dee7c1fa915c9928463616a94bc9297acf1abf8",
-    "factory.bin": "cf4cbea746187392d0b037e738bc5a665122bfe207572e2e7aae47e9cd3a7a5c",
-    "firmware.bin": "8af703afbeb6a90d9e068b3bcfc0ac03d122f63cc51f6e20c9af0dcf1cb7a3e5",
+    "factory.bin": "b3c76a6d362a4a7dbc855b6640ad579fa6190c8722806fb8d0e84bf553c72bf4",
+    "firmware.bin": "9f5f3797619885fb617f2d229ff35bfc620dec07e6b9ebe29795ef16bce4e8c1",
     "partitions.bin": "148b959cbff1c38aa8e1d5c0ba9d612c54997b945e56a63f41223eef650653a1"
   }
 }

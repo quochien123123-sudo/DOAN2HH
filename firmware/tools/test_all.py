@@ -14,6 +14,10 @@ with tempfile.TemporaryDirectory(prefix='pump-tests-') as directory:
         executable=dest/Path(source).stem
         run(['gcc','-std=c11','-Wall','-Wextra','-Werror',*[f'-I{x}' for x in includes],ROOT/'tests'/source,'-o',executable])
         run([executable])
+    executable=dest/'wifi_button'
+    run(['g++','-std=c++17','-Wall','-Wextra','-Werror','-I'+str(ROOT/'ESP32_ThingsBoard'),
+         ROOT/'tests/test_wifi_button.cpp','-o',executable])
+    run([executable])
     if sys.platform.startswith('linux'):
         executable=dest/'boot_counter'
         run(['gcc','-std=c11','-Wall','-Wextra','-Werror','-I'+str(ROOT/'tests/boot'),

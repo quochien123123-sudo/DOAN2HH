@@ -1,9 +1,10 @@
 {
   "ESP32_ThingsBoard/ESP32_ThingsBoard.ino": "6e79f59e02284c72ad51bc58b6f32b0bc6e11d53174702613330d380915e89e2",
-  "ESP32_ThingsBoard/config.h": "12d86af82606a40e7eb0ff3eee1cd135072b09714df94daad2128ff45dc612b6",
-  "ESP32_ThingsBoard/gateway.cpp": "0a3a36bf57d691f5df9a50aa5cbb0018acf65d7552da1759f140c700d5ffe75b",
+  "ESP32_ThingsBoard/config.h": "219d0d9d2e2cdc4468701be55f34ded3885e306ff8485473d0fb02c6ae52b32f",
+  "ESP32_ThingsBoard/gateway.cpp": "1ceb8d2fab43952a5e5297fbf8b8931a5a909ceb9d0705c1ded3e758477cd1c5",
   "ESP32_ThingsBoard/protocol.h": "b9fe1e9fae2df77ac0b348038047b36e5fd9f8c397e6066929d43242bab98ddc",
   "ESP32_ThingsBoard/trusted_roots.h": "abb9cfa4d60913b14fede12c433a38d9ab248695e33c875c4cf5c5e8af5221c4",
+  "ESP32_ThingsBoard/wifi_button.h": "d34562d5fe9fd3904a2bb62187a28e6ad2f63d4ab2d78383bfdbeb444e0907b1",
   "Master/Core/Inc/boot_counter.h": "720b84ea111604d9f81f02732b8cd5541bc7718c24bbe9bb8fd9c4fef7ac3fa1",
   "Master/Core/Inc/lcd2004.h": "33eab740386b0ebc81652f6c7b6856f1330b2173ae5b152e72970b8277d24073",
   "Master/Core/Inc/lora.h": "99cff1c8f88ef469175a51c43d6aeb573df809d594353685d82295e60fa4aff7",
@@ -176,5 +177,6 @@
   "tests/radio/test_radio.c": "c97719e2f296b34053a74ead251b49e376e09b33500b8b2e133ab9082d6709f0",
   "tests/test_boot_counter.c": "858de4d89270c559dc05885372e65ff27d241440d96d4358c5f39f724d85fca5",
   "tests/test_protocol.c": "f72dafc221d726d132d75640bdf844fe2bf93247bde3b01b4fe0cb240b7ef13f",
-  "tests/test_slave_state.c": "60344b628046004b516ed14346cec8565e5e88080e5e8185a28d2ee69e7a6987"
+  "tests/test_slave_state.c": "60344b628046004b516ed14346cec8565e5e88080e5e8185a28d2ee69e7a6987",
+  "tests/test_wifi_button.cpp": "14e3bd79668736709967e08cf7950bd55361d0b38d4ae0788e1de37824e58d4d"
 }

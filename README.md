@@ -3,6 +3,7 @@
 Bộ mã nguồn đồng bộ cho STM32F103C8 Master, ba STM32 Slave và **DOIT ESP32 DEVKIT V1** kết nối ThingsBoard.
 
 - [Hướng dẫn tiếng Việt: nối dây, build và nạp](firmware/README_VI.md)
+- [Tải riêng code ESP32 WiFiManager + nút D27, ZIP nhỏ](firmware/release/ESP32_ThingsBoard/ESP32_DevKitV1_WiFiManager.zip?raw=true)
 - [Code ESP32 mở bằng Arduino IDE](firmware/ESP32_ThingsBoard/ESP32_ThingsBoard.ino) — giữ toàn bộ thư mục cùng sketch.
 - [Code Master](firmware/Master/Core/Src/main.c)
 - [Code Slave dùng chung cho ID 1, 2, 3](firmware/relay32/Core/Src/main.c)
@@ -24,7 +25,7 @@ Bấm **Code → Download ZIP** trên nhánh `firmware-devkitv1-three-pumps-2026
 | Slave ID 3 | `firmware/release/Slave3/Slave3.hex` |
 | ESP32 DevKit V1, ảnh ghép tại 0x0 | `firmware/release/ESP32_ThingsBoard/factory.bin` |
 
-ESP32 build sẵn có cấu hình mạng trống. Chép `secrets.h.example` thành `secrets.h`, điền Wi-Fi và token ThingsBoard rồi build lại để kết nối mạng của bạn. Arduino IDE dùng board **DOIT ESP32 DEVKIT V1**, core ESP32 **2.0.17**, PubSubClient **2.8**, ArduinoJson **7.3.1**.
+ESP32 dùng **WiFiManager**: nối nút D27 (GPIO27) xuống GND, giữ **5 giây** để mở AP `Pump-Setup-xxxxxx` (mật khẩu mặc định `PumpSetup27`); truy cập `http://192.168.4.1` để cấu hình Wi-Fi. Lần đầu chưa có Wi-Fi lưu cũng tự mở portal. Chép `secrets.h.example` thành `secrets.h`, điền token ThingsBoard rồi build lại để kết nối cloud. Arduino IDE dùng board **DOIT ESP32 DEVKIT V1**, core ESP32 **2.0.17**, PubSubClient **2.8**, ArduinoJson **7.3.1**, **WiFiManager by tzapu 2.0.17**.
 
 Relay giữ nguyên trạng thái khi mất liên lạc; reset/mất điện rồi khởi động lại là OFF. Master PB0 chọn máy con, PB1 bật/tắt máy được chọn. Nạp đồng bộ toàn bộ firmware mới, không trộn với bản cũ trong hai tệp RAR.
 

@@ -10,30 +10,49 @@ cùng sketch. Không chỉ chép nội dung `.ino` sang một thư mục trống
 - Arduino-ESP32 **2.0.17** (gói ESP32 **espressif32 6.10.0** trong PlatformIO).
 - PubSubClient **2.8**.
 - ArduinoJson **7.3.1**.
+- **WiFiManager by tzapu 2.0.17**.
 - UART 115200, 8N1: STM32 Master PA9 → ESP32 GPIO16;
   STM32 Master PA10 ← ESP32 GPIO17; nối chung GND. Tín hiệu logic 3,3 V.
 
 Build PlatformIO dùng cấu hình của bộ firmware ở thư mục cha. Khi dùng Arduino
 IDE, chọn board và cổng ESP32 thực tế rồi Verify/Upload.
 
-## Cấu hình mạng
+## Nút D27 và cấu hình Wi-Fi bằng WiFiManager
+
+Nối **nút nhấn giữa D27 (GPIO27) và GND**. Chương trình dùng `INPUT_PULLUP`;
+nhả nút là HIGH, nhấn là LOW, không đưa 5 V vào chân này.
+
+1. Lần đầu chưa có Wi-Fi đã lưu, ESP32 tự mở AP cấu hình.
+2. Khi muốn đổi Wi-Fi, **giữ D27 liên tục 5 giây**. Một lần giữ chỉ kích hoạt một
+   lần; thả nút rồi nhấn lại để kích hoạt lần tiếp theo.
+3. Dùng điện thoại/máy tính kết nối AP **`Pump-Setup-xxxxxx`** (đuôi theo chip).
+   Mật khẩu AP mặc định **`PumpSetup27`**; có thể đổi trong cấu hình.
+4. Mở **http://192.168.4.1**, chọn Configure WiFi, chọn mạng Wi-Fi và nhập mật
+   khẩu, rồi Save. Nếu cửa sổ cấu hình tự hiện, dùng ngay cửa sổ đó.
+5. Thông tin Wi-Fi được lưu trên ESP32. Khởi động sau tự dùng mạng đã lưu,
+   không phải ghi SSID/mật khẩu trong mã. Portal hết khoảng 180 giây sẽ đóng;
+   có thể giữ D27 lại để mở.
+
+Giữ nút chỉ mở cấu hình; không xóa Wi-Fi đã lưu, không reset ESP32 và không
+phát lệnh OFF/bật bơm. Khi Wi-Fi mất, chương trình thử nối lại mạng đã lưu.
+UART có task riêng, WiFiManager có task riêng, MQTT chỉ được truy cập bởi task
+mạng; thao tác web/DNS/TLS không giữ vòng nhận UART.
+
+## Cấu hình ThingsBoard
 
 1. Chép `secrets.h.example` thành `secrets.h`.
-2. Điền SSID, mật khẩu Wi-Fi và device access token của ThingsBoard.
-3. Giữ `MQTT_USE_TLS 1`, cổng 8883. Gói đã kèm một tập root CA công khai
-   (xem `TRUSTED_ROOTS.txt`); cấu hình mặc định dùng tập này để xác minh TLS.
-   Nếu endpoint của bạn dùng chuỗi CA khác, ghi đè `THINGSBOARD_ROOT_CA` bằng
-   PEM từ nguồn chính thức của endpoint/nhà phát hành. Chuỗi chứng chỉ thực tế
-   của endpoint chưa được kiểm thử trên thiết bị; không dùng `setInsecure()`.
-4. ESP32 đồng bộ thời gian qua SNTP để xác minh thời hạn chứng chỉ. Nếu mạng chặn
-   NTP, cấu hình một nguồn thời gian tin cậy có thể truy cập trong mạng.
+2. Điền **THINGSBOARD_TOKEN** (device access token) và hostname nếu cần.
+   Wi-Fi cấu hình qua portal D27, không nhập SSID/password vào file này.
+3. Giữ `MQTT_USE_TLS 1`, cổng 8883. Gói đã kèm root CA công khai
+   (xem `TRUSTED_ROOTS.txt`); nếu endpoint dùng chuỗi CA khác, ghi đè
+   `THINGSBOARD_ROOT_CA` bằng PEM từ nguồn chính thức.
+4. ESP32 dùng SNTP để kiểm tra thời hạn chứng chỉ. Nếu mạng chặn NTP,
+   cấu hình nguồn thời gian tin cậy truy cập được trong mạng.
 
-Nếu thiếu SSID/token (hoặc chủ động đặt CA rỗng), code vẫn build và nạp được; task UART vẫn chạy nhưng
-không thử kết nối ThingsBoard. Serial Monitor cho biết cần cấu hình. Không có
-thông tin đăng nhập thật trong gói mã.
-
-Để thử trên bàn với MQTT plaintext, cần chủ động chọn `MQTT_USE_TLS 0` và cổng
-1883. Khi đó token và lệnh MQTT không được mã hóa. Tệp `secrets.h` được gitignore.
+Thiếu token ThingsBoard vẫn mở WiFiManager và phục vụ UART; kết nối MQTT chỉ
+bắt đầu khi cấu hình token/TLS hợp lệ. Không có thông tin đăng nhập thật trong
+mã nguồn. `secrets.h` được gitignore. Muốn thử MQTT plaintext trên bàn, chủ động
+chọn `MQTT_USE_TLS 0` và cổng 1883; không dùng `setInsecure()`.
 
 ## RPC trên dashboard
 
