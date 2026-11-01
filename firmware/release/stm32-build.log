@@ -6,25 +6,25 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 Master: full build 27 translation units, jobs=4
 Memory region         Used Size  Region Size  %age Used
              RAM:        4040 B        20 KB     19.73%
-           FLASH:       17044 B        62 KB     26.85%
+           FLASH:       17068 B        62 KB     26.88%
    text	   data	    bss	    dec	    hex	filename
-  16908	    136	   3912	  20956	   51dc	/workspace/DOAN2HH/firmware/build/Master/Master.elf
+  16932	    136	   3912	  20980	   51f4	/workspace/DOAN2HH/firmware/build/Master/Master.elf
 Slave1: full build 29 translation units, jobs=4
 Memory region         Used Size  Region Size  %age Used
              RAM:        2344 B        20 KB     11.45%
-           FLASH:       17672 B        62 KB     27.84%
+           FLASH:       17724 B        62 KB     27.92%
    text	   data	    bss	    dec	    hex	filename
-  17552	    120	   2232	  19904	   4dc0	/workspace/DOAN2HH/firmware/build/Slave1/Slave1.elf
+  17604	    120	   2232	  19956	   4df4	/workspace/DOAN2HH/firmware/build/Slave1/Slave1.elf
 Slave2: full build 29 translation units, jobs=4
 Memory region         Used Size  Region Size  %age Used
              RAM:        2344 B        20 KB     11.45%
-           FLASH:       17668 B        62 KB     27.83%
+           FLASH:       17720 B        62 KB     27.91%
    text	   data	    bss	    dec	    hex	filename
-  17548	    120	   2232	  19900	   4dbc	/workspace/DOAN2HH/firmware/build/Slave2/Slave2.elf
+  17600	    120	   2232	  19952	   4df0	/workspace/DOAN2HH/firmware/build/Slave2/Slave2.elf
 Slave3: full build 29 translation units, jobs=4
 Memory region         Used Size  Region Size  %age Used
              RAM:        2344 B        20 KB     11.45%
-           FLASH:       17656 B        62 KB     27.81%
+           FLASH:       17708 B        62 KB     27.89%
    text	   data	    bss	    dec	    hex	filename
-  17536	    120	   2232	  19888	   4db0	/workspace/DOAN2HH/firmware/build/Slave3/Slave3.elf
+  17588	    120	   2232	  19940	   4de4	/workspace/DOAN2HH/firmware/build/Slave3/Slave3.elf
 Build complete. STM32 flash base 0x08000000; last 2KiB reserved for boot counter.

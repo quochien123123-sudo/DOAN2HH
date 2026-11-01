@@ -4,12 +4,27 @@ extern I2C_HandleTypeDef hi2c1;
 static uint16_t address;
 static uint8_t ready, cursor;
 static char desired[2][16], shown[2][16];
+#define LCD_I2C_TIMEOUT_MS 3U
+
+static uint8_t wait_bus_idle(void)
+{
+    uint32_t started = HAL_GetTick();
+    /* STM32F1 HAL can return just after requesting STOP, before hardware BUSY
+     * clears. Treat that short tail as normal; a genuinely stuck bus still
+     * expires promptly so it cannot hold the radio/relay loop indefinitely.
+     */
+    while (__HAL_I2C_GET_FLAG(&hi2c1, I2C_FLAG_BUSY)) {
+        if (HAL_GetTick() - started >= LCD_I2C_TIMEOUT_MS) return 0U;
+    }
+    return 1U;
+}
 
 static uint8_t write_bytes(uint8_t *bytes, uint16_t count)
 {
     if (!ready) return 0U;
-    if (__HAL_I2C_GET_FLAG(&hi2c1, I2C_FLAG_BUSY) ||
-        HAL_I2C_Master_Transmit(&hi2c1, address, bytes, count, 3U) != HAL_OK) {
+    if (!wait_bus_idle() ||
+        HAL_I2C_Master_Transmit(&hi2c1, address, bytes, count,
+                                LCD_I2C_TIMEOUT_MS) != HAL_OK) {
         ready = 0U; /* Stop on first fault; do not repeat hundreds of failed writes. */
         return 0U;
     }
@@ -46,16 +61,21 @@ void LCD_Init(void)
     memset(desired, ' ', sizeof(desired));
     memset(shown, 0, sizeof(shown));
     cursor = 0U;
-    if (__HAL_I2C_GET_FLAG(&hi2c1, I2C_FLAG_BUSY)) return;
+    /* Power-up settling belongs before probing the backpack as well as before
+     * issuing the HD44780 reset sequence. Startup only, never a loop delay.
+     */
+    HAL_Delay(50U);
+    if (!wait_bus_idle()) return;
     for (i = 0U; i < sizeof(addresses); ++i) {
-        if (HAL_I2C_IsDeviceReady(&hi2c1, (uint16_t)addresses[i] << 1, 1U, 3U) == HAL_OK) {
+        if (!wait_bus_idle()) return;
+        if (HAL_I2C_IsDeviceReady(&hi2c1, (uint16_t)addresses[i] << 1, 1U,
+                                  LCD_I2C_TIMEOUT_MS) == HAL_OK) {
             address = (uint16_t)addresses[i] << 1;
             break;
         }
     }
     if (!address) return;
     ready = 1U;
-    HAL_Delay(50U); /* Startup only; no conversion/display delays in the main loop. */
     for (i = 0U; i < 3U; ++i) {
         nibble_bytes(0x30U, 0U, bytes);
         if (!write_bytes(bytes, sizeof(bytes))) return;

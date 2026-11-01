@@ -34,6 +34,8 @@ LoRa RA-02/SX1278: 433 MHz, SF7, BW125 kHz, CR4/5, preamble 8, PHY CRC bật. Sl
 
 LCD Master 20×4, Slave 16×2; tự dò địa chỉ PCF8574 0x27/0x3F. SHT30 mặc định 0x44 (`relay32/Core/Inc/sht30.h`). LCD lỗi bị tách khỏi đường relay/ACK; cảm biến lỗi có cờ valid riêng.
 
+Bản sửa LCD: Slave chờ BUSY tối đa 3 ms để kết thúc STOP thay vì vô hiệu hóa màn hình ngay; Master vẫn vẽ LCD khi radio chưa sẵn sàng. Cả hai chờ nguồn 50 ms trước khi dò địa chỉ. File HEX mới có trong `release/STM32_LCD_Fix.zip`. Đèn nền sáng nhưng không có chữ vẫn cần kiểm tra biến trở tương phản, dây PB6/PB7 và địa chỉ backpack thực tế.
+
 ## 3. Nạp STM32 ngay từ file đã build
 
 Dùng **STM32CubeProgrammer + ST-Link/SWD**; BOOT0=0. Nối SWDIO PA13, SWCLK PA14, GND và nguồn tham chiếu 3,3 V phù hợp với mạch.

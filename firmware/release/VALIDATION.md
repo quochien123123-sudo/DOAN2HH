@@ -7,10 +7,10 @@ không phải các firmware cũ trong hai tệp RAR.
 
 | Target | Toolchain | Flash ứng dụng | RAM tĩnh/vùng linker |
 |---|---|---:|---:|
-| Master | ARM GCC7.3.1 20180622 |17.044B /63.488B|4.040B /20.480B|
-| Slave1 | ARM GCC7.3.1 20180622 |17.672B /63.488B|2.344B /20.480B|
-| Slave2 | ARM GCC7.3.1 20180622 |17.668B /63.488B|2.344B /20.480B|
-| Slave3 | ARM GCC7.3.1 20180622 |17.656B /63.488B|2.344B /20.480B|
+| Master | ARM GCC7.3.1 20180622 |17.068B /63.488B|4.040B /20.480B|
+| Slave1 | ARM GCC7.3.1 20180622 |17.724B /63.488B|2.344B /20.480B|
+| Slave2 | ARM GCC7.3.1 20180622 |17.720B /63.488B|2.344B /20.480B|
+| Slave3 | ARM GCC7.3.1 20180622 |17.708B /63.488B|2.344B /20.480B|
 | DOIT ESP32 DEVKIT V1 | Xtensa GCC8.4.0, Arduino-ESP32 2.0.17 |1.035.061B /1.310.720B|48.540B /327.680B|
 
 Không có compiler warning trong các build cuối. STM32 application dùng
@@ -62,3 +62,18 @@ nhấn ngắn không cộng dồn, chống dội cạnh, millis wrap và giữ n
 Xem `wifimanager-tests.log`. WiFiManager lifecycle đã được đối chiếu với mã
 thư viện2.0.17; captive portal/save NVS và thời gian đáp ứng thực tế vẫn cần
 thử trên ESP32 cùng nút thật.
+
+## Bản sửa LCD — 01/11/2026
+
+Đã sửa hai lỗi có thể gây màn hình trắng:
+- Master không còn để các poll chưa thể chạy (radio lỗi) chặn vĩnh viễn việc
+  vẽ LCD; màn hình vẫn hiện trạng thái RF:ERR.
+- Slave chờ BUSY tối đa3ms để kết thúc STOP bình thường thay vì vô hiệu hóa LCD
+  ngay khi thấy BUSY thoáng qua. Chờ nguồn50ms trước lần dò I2C đầu ở cả hai.
+
+Đã chạy đủ9nhóm host test qua tools/test_all.py; thêm kiểm tra scheduler LCD
+Master và driver LCD Slave với HAL giả. Kiểm tra BUSY thoáng qua, BUSY kẹt,
+HAL lỗi, địa chỉ0x27/0x3F, init/write sequence, tick wrap và không có radio đều
+đạt. Build lại4target STM32 đạt, không cảnh báo. ESP32 WiFiManager không đổi.
+Những kiểm tra này chứng minh các đường lỗi trong mã; chưa xác nhận nguyên
+nhân phần cứng trên màn hình của người dùng hoặc thử LCD thật sau bản sửa.

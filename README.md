@@ -3,6 +3,7 @@
 Bộ mã nguồn đồng bộ cho STM32F103C8 Master, ba STM32 Slave và **DOIT ESP32 DEVKIT V1** kết nối ThingsBoard.
 
 - [Hướng dẫn tiếng Việt: nối dây, build và nạp](firmware/README_VI.md)
+- [File HEX sửa lỗi LCD Master/Slave, ZIP nhỏ](firmware/release/STM32_LCD_Fix.zip?raw=true)
 - [Tải riêng code ESP32 WiFiManager + nút D27, ZIP nhỏ](firmware/release/ESP32_ThingsBoard/ESP32_DevKitV1_WiFiManager.zip?raw=true)
 - [Code ESP32 mở bằng Arduino IDE](firmware/ESP32_ThingsBoard/ESP32_ThingsBoard.ino) — giữ toàn bộ thư mục cùng sketch.
 - [Code Master](firmware/Master/Core/Src/main.c)

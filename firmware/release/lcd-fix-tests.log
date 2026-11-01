@@ -1,0 +1,38 @@
+protocol: encode/decode CRC, strict framing/ranges, integer limits PASS
+slave policy: startup OFF, session binding, applied/duplicate/stale, local override,
+CAS conflict, boot mismatch, new-session recovery and sequence wrap all passed.
+PASS transient BUSY after successful writes; init sequence and incremental updates
+PASS transient BUSY wait across the uint32_t tick wrap
+PASS fallback address 0x3F after missing 0x27
+PASS stuck BUSY expires bounded wait and disables display, no repeated transfers
+PASS stuck BUSY during init is bounded after power-on delay
+PASS HAL transmit error disables display and preserves error isolation
+PASS no responding address stays disabled
+PASS 4999 ms does not open portal; 5000 ms opens exactly once while held
+PASS holding/release bounce cannot repeat; stable release permits next long press
+PASS separate short presses do not accumulate toward the five-second hold
+PASS press-edge bounce restarts debounce and hold timing
+PASS timing across millis() wrap
+PASS button already held at boot uses the same five-second threshold
+boot journal: 800 boots/page rotation, torn commit recovery, flash relock PASS
+PASS UART receiver epoch: matching accepted, old BOOT_CHANGED without dedup mutation, legacy rejected
+PASS UART dedup, request identity, BUSY terminal-result cache, per-node isolation
+PASS fresh preflight CAS fields; unmatched old ACK ignored; matching applied ACK completes
+PASS duplicate reply with intervening local OFF becomes OVERRIDDEN, never re-applies ON
+PASS timeout/offline preserves last known ON, no OFF command generated
+PASS physical toggle uses freshly polled state, with revision precondition
+PASS reproduction: pre-fix no-radio scheduler writes zero rows with overdue polls
+PASS no-radio scheduler paints RF:ERR and all four rows instead of remaining blank
+PASS healthy imminent polls still defer LCD work
+PASS healthy idle radio permits LCD updates
+PASS hardware radio not-ready also releases the unusable poll reservation
+PASS active radio owner, queued commands, and unavailable LCD retain priority guards
+PASS one 50ms power-up delay precedes the first Master LCD address probe
+PASS async TX completes only on TxDone; no foreground wait
+PASS unread RX retained, over-capacity rejected, SNR quarter-dB preserved
+PASS CRC errors and CRC-absent explicit frames rejected
+PASS SPI/FIFO failure aborts, never falsely accepted as TX
+PASS TX deadline is bounded at 500ms
+PASS radio brownout/config mismatch detected; total SPI calls 302
+Gateway parser: nodes1..3, strict framing/ranges, freshness, session/ID/node, Master reboot cancellation+relay retention: PASS
+All selected host tests completed. Physical hardware/RF/cloud tests are separate.

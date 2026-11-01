@@ -14,6 +14,11 @@ with tempfile.TemporaryDirectory(prefix='pump-tests-') as directory:
         executable=dest/Path(source).stem
         run(['gcc','-std=c11','-Wall','-Wextra','-Werror',*[f'-I{x}' for x in includes],ROOT/'tests'/source,'-o',executable])
         run([executable])
+    executable=dest/'lcd_slave'
+    run(['gcc','-std=c11','-Wall','-Wextra','-Werror','-I'+str(ROOT/'tests/lcd'),
+         '-I'+str(ROOT/'relay32/Core/Inc'),ROOT/'tests/test_lcd_slave.c',
+         ROOT/'relay32/Core/Src/lcd_i2c.c','-o',executable])
+    run([executable])
     executable=dest/'wifi_button'
     run(['g++','-std=c++17','-Wall','-Wextra','-Werror','-I'+str(ROOT/'ESP32_ThingsBoard'),
          ROOT/'tests/test_wifi_button.cpp','-o',executable])
@@ -24,6 +29,6 @@ with tempfile.TemporaryDirectory(prefix='pump-tests-') as directory:
              ROOT/'tests/test_boot_counter.c',ROOT/'common/boot_counter.c','-o',executable])
         result=subprocess.run([str(executable)],check=False)
         if result.returncode not in [0,77]: raise SystemExit(result.returncode)
-    for test in ['test_master_logic.py','test_radio.py','test_gateway.py']:
+    for test in ['test_master_logic.py','test_master_lcd.py','test_radio.py','test_gateway.py']:
         run([sys.executable,ROOT/'tests'/test])
 print('All selected host tests completed. Physical hardware/RF/cloud tests are separate.')

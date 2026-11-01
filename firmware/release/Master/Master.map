@@ -3013,7 +3013,7 @@ LOAD /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v
                 0x0000000008000000                g_pfnVectors
                 0x000000000800010c                . = ALIGN (0x4)
 
-.text           0x000000000800010c     0x3fbc
+.text           0x000000000800010c     0x3fd4
                 0x000000000800010c                . = ALIGN (0x4)
  *(.text)
  .text          0x000000000800010c       0x14 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-strcmp.o)
@@ -3043,490 +3043,490 @@ LOAD /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v
                 0x0000000008000340       0x20 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
                 0x0000000008000340                LCD2004_Clear
  .text.LCD2004_Init
-                0x0000000008000360       0xac /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
+                0x0000000008000360       0xb0 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
                 0x0000000008000360                LCD2004_Init
  .text.LCD2004_SetCursor
-                0x000000000800040c       0x28 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
-                0x000000000800040c                LCD2004_SetCursor
+                0x0000000008000410       0x28 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
+                0x0000000008000410                LCD2004_SetCursor
  .text.LCD2004_Print
-                0x0000000008000434       0x34 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
-                0x0000000008000434                LCD2004_Print
+                0x0000000008000438       0x34 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
+                0x0000000008000438                LCD2004_Print
  .text.LCD2004_PrintLine
-                0x0000000008000468       0x40 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
-                0x0000000008000468                LCD2004_PrintLine
+                0x000000000800046c       0x40 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
+                0x000000000800046c                LCD2004_PrintLine
  .text.LCD2004_IsReady
-                0x00000000080004a8        0xc /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
-                0x00000000080004a8                LCD2004_IsReady
+                0x00000000080004ac        0xc /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
+                0x00000000080004ac                LCD2004_IsReady
  .text.releaseRadio
-                0x00000000080004b4       0x10 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
- .text.fault    0x00000000080004c4       0x20 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x00000000080004b8       0x10 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+ .text.fault    0x00000000080004c8       0x20 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
  .text.selectRadio
-                0x00000000080004e4       0x10 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
- .text.readReg  0x00000000080004f4       0x4c /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x00000000080004e8       0x10 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+ .text.readReg  0x00000000080004f8       0x4c /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
  .text.writeReg
-                0x0000000008000540       0x40 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x0000000008000544       0x40 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
  .text.writeChecked
-                0x0000000008000580       0x2c /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
- .text.enterRx  0x00000000080005ac       0x44 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x0000000008000584       0x2c /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+ .text.enterRx  0x00000000080005b0       0x44 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
  .text.readFifo.constprop.3
-                0x00000000080005f0       0x58 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x00000000080005f4       0x58 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
  .text.receiveFrame
-                0x0000000008000648       0xe8 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x000000000800064c       0xe8 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
  .text.LoRa_Init
-                0x0000000008000730      0x194 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
-                0x0000000008000730                LoRa_Init
+                0x0000000008000734      0x194 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x0000000008000734                LoRa_Init
  .text.LoRa_Process
-                0x00000000080008c4      0x140 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
-                0x00000000080008c4                LoRa_Process
+                0x00000000080008c8      0x140 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x00000000080008c8                LoRa_Process
  .text.LoRa_SendAsync
-                0x0000000008000a04      0x144 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
-                0x0000000008000a04                LoRa_SendAsync
+                0x0000000008000a08      0x144 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x0000000008000a08                LoRa_SendAsync
  .text.LoRa_IsReady
-                0x0000000008000b48        0xc /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
-                0x0000000008000b48                LoRa_IsReady
+                0x0000000008000b4c        0xc /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x0000000008000b4c                LoRa_IsReady
  .text.LoRa_IsBusy
-                0x0000000008000b54        0xc /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
-                0x0000000008000b54                LoRa_IsBusy
+                0x0000000008000b58        0xc /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x0000000008000b58                LoRa_IsBusy
  .text.LoRa_TxResult
-                0x0000000008000b60        0xc /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
-                0x0000000008000b60                LoRa_TxResult
+                0x0000000008000b64        0xc /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x0000000008000b64                LoRa_TxResult
  .text.LoRa_OnDio0Interrupt
-                0x0000000008000b6c        0xc /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
-                0x0000000008000b6c                LoRa_OnDio0Interrupt
+                0x0000000008000b70        0xc /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x0000000008000b70                LoRa_OnDio0Interrupt
  .text.LoRa_ReadPacket
-                0x0000000008000b78       0x40 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
-                0x0000000008000b78                LoRa_ReadPacket
+                0x0000000008000b7c       0x40 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x0000000008000b7c                LoRa_ReadPacket
  .text.LoRa_GetLastRSSI
-                0x0000000008000bb8        0xc /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
-                0x0000000008000bb8                LoRa_GetLastRSSI
+                0x0000000008000bbc        0xc /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x0000000008000bbc                LoRa_GetLastRSSI
  .text.LoRa_GetLastSNR
-                0x0000000008000bc4        0xc /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
-                0x0000000008000bc4                LoRa_GetLastSNR
+                0x0000000008000bc8        0xc /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+                0x0000000008000bc8                LoRa_GetLastSNR
  .text.Proto_Put32
-                0x0000000008000bd0       0x10 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008000bd4       0x10 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .text.Proto_Get32
-                0x0000000008000be0        0x4 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008000be4        0x4 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .text.Proto_Valid
-                0x0000000008000be4       0x66 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
- *fill*         0x0000000008000c4a        0x2 
+                0x0000000008000be8       0x66 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+ *fill*         0x0000000008000c4e        0x2 
  .text.ClearOwner
-                0x0000000008000c4c       0x28 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
- .text.Pressed  0x0000000008000c74       0x48 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008000c50       0x28 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+ .text.Pressed  0x0000000008000c78       0x48 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .text.Proto_U32
-                0x0000000008000cbc       0x36 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
- *fill*         0x0000000008000cf2        0x2 
+                0x0000000008000cc0       0x36 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+ *fill*         0x0000000008000cf6        0x2 
  .text.RadioFailure
-                0x0000000008000cf4       0x3c /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008000cf8       0x3c /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .text.UARTSend
-                0x0000000008000d30       0x30 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008000d34       0x30 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .text.SendResult
-                0x0000000008000d60       0x38 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008000d64       0x38 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .text.StoreResult
-                0x0000000008000d98       0x80 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008000d9c       0x80 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .text.FinishCommand
-                0x0000000008000e18       0x64 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008000e1c       0x64 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .text.RequestCommand
-                0x0000000008000e7c      0x1dc /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008000e80      0x1dc /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .text.Proto_CRC16.constprop.10
-                0x0000000008001058       0x3c /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x000000000800105c       0x3c /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .text.Proto_Encode.part.0.constprop.9
-                0x0000000008001094       0x8c /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008001098       0x8c /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .text.StartTransmission
-                0x0000000008001120       0x4c /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008001124       0x4c /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .text.RetryOrFinish
-                0x000000000800116c       0x70 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008001170       0x70 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .text.StartJob
-                0x00000000080011dc       0x64 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x00000000080011e0       0x64 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .text.ESP32_UART_IRQHandler
-                0x0000000008001240       0x50 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
-                0x0000000008001240                ESP32_UART_IRQHandler
+                0x0000000008001244       0x50 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008001244                ESP32_UART_IRQHandler
  .text.SystemClock_Config
-                0x0000000008001290       0x5e /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
-                0x0000000008001290                SystemClock_Config
- *fill*         0x00000000080012ee        0x2 
+                0x0000000008001294       0x5e /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008001294                SystemClock_Config
+ *fill*         0x00000000080012f2        0x2 
  .text.startup.main
-                0x00000000080012f0      0xb18 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
-                0x00000000080012f0                main
+                0x00000000080012f4      0xb2c /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x00000000080012f4                main
  .text.HAL_GPIO_EXTI_Callback
-                0x0000000008001e08       0x18 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
-                0x0000000008001e08                HAL_GPIO_EXTI_Callback
+                0x0000000008001e20       0x18 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008001e20                HAL_GPIO_EXTI_Callback
  .text.HAL_MspInit
-                0x0000000008001e20       0x44 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_hal_msp.o
-                0x0000000008001e20                HAL_MspInit
+                0x0000000008001e38       0x44 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_hal_msp.o
+                0x0000000008001e38                HAL_MspInit
  .text.HAL_I2C_MspInit
-                0x0000000008001e64       0x64 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_hal_msp.o
-                0x0000000008001e64                HAL_I2C_MspInit
+                0x0000000008001e7c       0x64 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_hal_msp.o
+                0x0000000008001e7c                HAL_I2C_MspInit
  .text.HAL_SPI_MspInit
-                0x0000000008001ec8       0x74 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_hal_msp.o
-                0x0000000008001ec8                HAL_SPI_MspInit
+                0x0000000008001ee0       0x74 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_hal_msp.o
+                0x0000000008001ee0                HAL_SPI_MspInit
  .text.HAL_UART_MspInit
-                0x0000000008001f3c       0x88 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_hal_msp.o
-                0x0000000008001f3c                HAL_UART_MspInit
+                0x0000000008001f54       0x88 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_hal_msp.o
+                0x0000000008001f54                HAL_UART_MspInit
  .text.NMI_Handler
-                0x0000000008001fc4        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
-                0x0000000008001fc4                NMI_Handler
+                0x0000000008001fdc        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
+                0x0000000008001fdc                NMI_Handler
  .text.HardFault_Handler
-                0x0000000008001fc6        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
-                0x0000000008001fc6                HardFault_Handler
+                0x0000000008001fde        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
+                0x0000000008001fde                HardFault_Handler
  .text.MemManage_Handler
-                0x0000000008001fc8        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
-                0x0000000008001fc8                MemManage_Handler
+                0x0000000008001fe0        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
+                0x0000000008001fe0                MemManage_Handler
  .text.BusFault_Handler
-                0x0000000008001fca        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
-                0x0000000008001fca                BusFault_Handler
+                0x0000000008001fe2        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
+                0x0000000008001fe2                BusFault_Handler
  .text.UsageFault_Handler
-                0x0000000008001fcc        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
-                0x0000000008001fcc                UsageFault_Handler
+                0x0000000008001fe4        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
+                0x0000000008001fe4                UsageFault_Handler
  .text.SVC_Handler
-                0x0000000008001fce        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
-                0x0000000008001fce                SVC_Handler
+                0x0000000008001fe6        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
+                0x0000000008001fe6                SVC_Handler
  .text.DebugMon_Handler
-                0x0000000008001fd0        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
-                0x0000000008001fd0                DebugMon_Handler
+                0x0000000008001fe8        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
+                0x0000000008001fe8                DebugMon_Handler
  .text.PendSV_Handler
-                0x0000000008001fd2        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
-                0x0000000008001fd2                PendSV_Handler
+                0x0000000008001fea        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
+                0x0000000008001fea                PendSV_Handler
  .text.SysTick_Handler
-                0x0000000008001fd4        0x4 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
-                0x0000000008001fd4                SysTick_Handler
+                0x0000000008001fec        0x4 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
+                0x0000000008001fec                SysTick_Handler
  .text.USART1_IRQHandler
-                0x0000000008001fd8        0x4 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
-                0x0000000008001fd8                USART1_IRQHandler
+                0x0000000008001ff0        0x4 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
+                0x0000000008001ff0                USART1_IRQHandler
  .text.EXTI15_10_IRQHandler
-                0x0000000008001fdc        0x8 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
-                0x0000000008001fdc                EXTI15_10_IRQHandler
- .text._sbrk    0x0000000008001fe4       0x34 /workspace/DOAN2HH/firmware/build/Master/Core/Src/sysmem.o
-                0x0000000008001fe4                _sbrk
+                0x0000000008001ff4        0x8 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
+                0x0000000008001ff4                EXTI15_10_IRQHandler
+ .text._sbrk    0x0000000008001ffc       0x34 /workspace/DOAN2HH/firmware/build/Master/Core/Src/sysmem.o
+                0x0000000008001ffc                _sbrk
  .text.SystemInit
-                0x0000000008002018        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/system_stm32f1xx.o
-                0x0000000008002018                SystemInit
- *fill*         0x000000000800201a        0x2 
+                0x0000000008002030        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Src/system_stm32f1xx.o
+                0x0000000008002030                SystemInit
+ *fill*         0x0000000008002032        0x2 
  .text.HAL_InitTick
-                0x000000000800201c       0x48 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x000000000800201c                HAL_InitTick
+                0x0000000008002034       0x48 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x0000000008002034                HAL_InitTick
  .text.HAL_Init
-                0x0000000008002064       0x24 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x0000000008002064                HAL_Init
+                0x000000000800207c       0x24 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x000000000800207c                HAL_Init
  .text.HAL_IncTick
-                0x0000000008002088       0x18 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x0000000008002088                HAL_IncTick
+                0x00000000080020a0       0x18 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x00000000080020a0                HAL_IncTick
  .text.HAL_GetTick
-                0x00000000080020a0        0xc /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x00000000080020a0                HAL_GetTick
+                0x00000000080020b8        0xc /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x00000000080020b8                HAL_GetTick
  .text.HAL_Delay
-                0x00000000080020ac       0x24 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x00000000080020ac                HAL_Delay
+                0x00000000080020c4       0x24 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x00000000080020c4                HAL_Delay
  .text.HAL_NVIC_SetPriorityGrouping
-                0x00000000080020d0       0x24 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
-                0x00000000080020d0                HAL_NVIC_SetPriorityGrouping
+                0x00000000080020e8       0x24 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+                0x00000000080020e8                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x00000000080020f4       0x68 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
-                0x00000000080020f4                HAL_NVIC_SetPriority
+                0x000000000800210c       0x68 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+                0x000000000800210c                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x000000000800215c       0x1c /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
-                0x000000000800215c                HAL_NVIC_EnableIRQ
+                0x0000000008002174       0x1c /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+                0x0000000008002174                HAL_NVIC_EnableIRQ
  .text.HAL_SYSTICK_Config
-                0x0000000008002178       0x2c /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
-                0x0000000008002178                HAL_SYSTICK_Config
+                0x0000000008002190       0x2c /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+                0x0000000008002190                HAL_SYSTICK_Config
  .text.FLASH_SetErrorCode
-                0x00000000080021a4       0x50 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
+                0x00000000080021bc       0x50 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
  .text.HAL_FLASH_Unlock
-                0x00000000080021f4       0x24 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
-                0x00000000080021f4                HAL_FLASH_Unlock
+                0x000000000800220c       0x24 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
+                0x000000000800220c                HAL_FLASH_Unlock
  .text.HAL_FLASH_Lock
-                0x0000000008002218       0x14 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
-                0x0000000008002218                HAL_FLASH_Lock
+                0x0000000008002230       0x14 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
+                0x0000000008002230                HAL_FLASH_Lock
  .text.FLASH_WaitForLastOperation
-                0x000000000800222c       0x54 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
-                0x000000000800222c                FLASH_WaitForLastOperation
+                0x0000000008002244       0x54 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
+                0x0000000008002244                FLASH_WaitForLastOperation
  .text.HAL_FLASH_Program
-                0x0000000008002280       0xa0 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
-                0x0000000008002280                HAL_FLASH_Program
+                0x0000000008002298       0xa0 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
+                0x0000000008002298                HAL_FLASH_Program
  .text.FLASH_MassErase.isra.0
-                0x0000000008002320       0x24 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
+                0x0000000008002338       0x24 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
  .text.FLASH_PageErase
-                0x0000000008002344       0x24 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
-                0x0000000008002344                FLASH_PageErase
+                0x000000000800235c       0x24 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
+                0x000000000800235c                FLASH_PageErase
  .text.HAL_FLASHEx_Erase
-                0x0000000008002368       0x98 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
-                0x0000000008002368                HAL_FLASHEx_Erase
+                0x0000000008002380       0x98 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
+                0x0000000008002380                HAL_FLASHEx_Erase
  .text.HAL_GPIO_Init
-                0x0000000008002400      0x1c0 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
-                0x0000000008002400                HAL_GPIO_Init
+                0x0000000008002418      0x1c0 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+                0x0000000008002418                HAL_GPIO_Init
  .text.HAL_GPIO_ReadPin
-                0x00000000080025c0        0xc /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
-                0x00000000080025c0                HAL_GPIO_ReadPin
+                0x00000000080025d8        0xc /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+                0x00000000080025d8                HAL_GPIO_ReadPin
  .text.HAL_GPIO_WritePin
-                0x00000000080025cc        0xa /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
-                0x00000000080025cc                HAL_GPIO_WritePin
- *fill*         0x00000000080025d6        0x2 
+                0x00000000080025e4        0xa /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+                0x00000000080025e4                HAL_GPIO_WritePin
+ *fill*         0x00000000080025ee        0x2 
  .text.HAL_GPIO_EXTI_IRQHandler
-                0x00000000080025d8       0x18 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
-                0x00000000080025d8                HAL_GPIO_EXTI_IRQHandler
+                0x00000000080025f0       0x18 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+                0x00000000080025f0                HAL_GPIO_EXTI_IRQHandler
  .text.I2C_IsAcknowledgeFailed
-                0x00000000080025f0       0x32 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+                0x0000000008002608       0x32 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
  .text.I2C_WaitOnMasterAddressFlagUntilTimeout
-                0x0000000008002622       0x74 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+                0x000000000800263a       0x74 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
  .text.I2C_WaitOnBTFFlagUntilTimeout
-                0x0000000008002696       0x4c /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+                0x00000000080026ae       0x4c /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
  .text.I2C_WaitOnFlagUntilTimeout
-                0x00000000080026e2       0x62 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+                0x00000000080026fa       0x62 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
  .text.I2C_WaitOnTXEFlagUntilTimeout
-                0x0000000008002744       0x4c /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+                0x000000000800275c       0x4c /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
  .text.HAL_I2C_Init
-                0x0000000008002790      0x158 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
-                0x0000000008002790                HAL_I2C_Init
+                0x00000000080027a8      0x158 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+                0x00000000080027a8                HAL_I2C_Init
  .text.HAL_I2C_Master_Transmit
-                0x00000000080028e8      0x1a8 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
-                0x00000000080028e8                HAL_I2C_Master_Transmit
+                0x0000000008002900      0x1a8 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+                0x0000000008002900                HAL_I2C_Master_Transmit
  .text.HAL_I2C_IsDeviceReady
-                0x0000000008002a90      0x160 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
-                0x0000000008002a90                HAL_I2C_IsDeviceReady
+                0x0000000008002aa8      0x160 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+                0x0000000008002aa8                HAL_I2C_IsDeviceReady
  .text.HAL_RCC_OscConfig
-                0x0000000008002bf0      0x33c /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
-                0x0000000008002bf0                HAL_RCC_OscConfig
+                0x0000000008002c08      0x33c /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+                0x0000000008002c08                HAL_RCC_OscConfig
  .text.HAL_RCC_GetSysClockFreq
-                0x0000000008002f2c       0x74 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
-                0x0000000008002f2c                HAL_RCC_GetSysClockFreq
+                0x0000000008002f44       0x74 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+                0x0000000008002f44                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_ClockConfig
-                0x0000000008002fa0      0x138 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
-                0x0000000008002fa0                HAL_RCC_ClockConfig
+                0x0000000008002fb8      0x138 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+                0x0000000008002fb8                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetPCLK1Freq
-                0x00000000080030d8       0x20 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
-                0x00000000080030d8                HAL_RCC_GetPCLK1Freq
+                0x00000000080030f0       0x20 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+                0x00000000080030f0                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetPCLK2Freq
-                0x00000000080030f8       0x20 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
-                0x00000000080030f8                HAL_RCC_GetPCLK2Freq
+                0x0000000008003110       0x20 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+                0x0000000008003110                HAL_RCC_GetPCLK2Freq
  .text.SPI_WaitFlagStateUntilTimeout.constprop.6
-                0x0000000008003118       0xac /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
+                0x0000000008003130       0xac /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
  .text.SPI_EndRxTxTransaction
-                0x00000000080031c4       0x1c /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
+                0x00000000080031dc       0x1c /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
  .text.HAL_SPI_Init
-                0x00000000080031e0       0xb0 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
-                0x00000000080031e0                HAL_SPI_Init
+                0x00000000080031f8       0xb0 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
+                0x00000000080031f8                HAL_SPI_Init
  .text.HAL_SPI_Transmit
-                0x0000000008003290      0x156 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
-                0x0000000008003290                HAL_SPI_Transmit
+                0x00000000080032a8      0x156 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
+                0x00000000080032a8                HAL_SPI_Transmit
  .text.HAL_SPI_TransmitReceive
-                0x00000000080033e6      0x1e0 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
-                0x00000000080033e6                HAL_SPI_TransmitReceive
- *fill*         0x00000000080035c6        0x2 
+                0x00000000080033fe      0x1e0 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
+                0x00000000080033fe                HAL_SPI_TransmitReceive
+ *fill*         0x00000000080035de        0x2 
  .text.UART_SetConfig
-                0x00000000080035c8       0x74 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                0x00000000080035e0       0x74 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
  .text.UART_WaitOnFlagUntilTimeout.constprop.3
-                0x000000000800363c       0x50 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                0x0000000008003654       0x50 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
  .text.HAL_UART_Init
-                0x000000000800368c       0x5c /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
-                0x000000000800368c                HAL_UART_Init
+                0x00000000080036a4       0x5c /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                0x00000000080036a4                HAL_UART_Init
  .text.HAL_UART_Transmit
-                0x00000000080036e8       0xae /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
-                0x00000000080036e8                HAL_UART_Transmit
- *fill*         0x0000000008003796        0x2 
+                0x0000000008003700       0xae /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+                0x0000000008003700                HAL_UART_Transmit
+ *fill*         0x00000000080037ae        0x2 
  .text.Reset_Handler
-                0x0000000008003798       0x48 /workspace/DOAN2HH/firmware/build/Master/Core/Startup/startup_stm32f103c8tx.o
-                0x0000000008003798                Reset_Handler
+                0x00000000080037b0       0x48 /workspace/DOAN2HH/firmware/build/Master/Core/Startup/startup_stm32f103c8tx.o
+                0x00000000080037b0                Reset_Handler
  .text.Default_Handler
-                0x00000000080037e0        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Startup/startup_stm32f103c8tx.o
-                0x00000000080037e0                RTC_Alarm_IRQHandler
-                0x00000000080037e0                EXTI2_IRQHandler
-                0x00000000080037e0                TIM1_CC_IRQHandler
-                0x00000000080037e0                PVD_IRQHandler
-                0x00000000080037e0                EXTI3_IRQHandler
-                0x00000000080037e0                EXTI0_IRQHandler
-                0x00000000080037e0                I2C2_EV_IRQHandler
-                0x00000000080037e0                ADC1_2_IRQHandler
-                0x00000000080037e0                SPI1_IRQHandler
-                0x00000000080037e0                TAMPER_IRQHandler
-                0x00000000080037e0                DMA1_Channel4_IRQHandler
-                0x00000000080037e0                USART3_IRQHandler
-                0x00000000080037e0                RTC_IRQHandler
-                0x00000000080037e0                DMA1_Channel7_IRQHandler
-                0x00000000080037e0                CAN1_RX1_IRQHandler
-                0x00000000080037e0                TIM4_IRQHandler
-                0x00000000080037e0                I2C1_EV_IRQHandler
-                0x00000000080037e0                DMA1_Channel6_IRQHandler
-                0x00000000080037e0                TIM3_IRQHandler
-                0x00000000080037e0                RCC_IRQHandler
-                0x00000000080037e0                TIM1_TRG_COM_IRQHandler
-                0x00000000080037e0                DMA1_Channel1_IRQHandler
-                0x00000000080037e0                Default_Handler
-                0x00000000080037e0                EXTI9_5_IRQHandler
-                0x00000000080037e0                SPI2_IRQHandler
-                0x00000000080037e0                DMA1_Channel5_IRQHandler
-                0x00000000080037e0                EXTI4_IRQHandler
-                0x00000000080037e0                USB_LP_CAN1_RX0_IRQHandler
-                0x00000000080037e0                USB_HP_CAN1_TX_IRQHandler
-                0x00000000080037e0                DMA1_Channel3_IRQHandler
-                0x00000000080037e0                TIM1_UP_IRQHandler
-                0x00000000080037e0                WWDG_IRQHandler
-                0x00000000080037e0                TIM2_IRQHandler
-                0x00000000080037e0                TIM1_BRK_IRQHandler
-                0x00000000080037e0                EXTI1_IRQHandler
-                0x00000000080037e0                USART2_IRQHandler
-                0x00000000080037e0                I2C2_ER_IRQHandler
-                0x00000000080037e0                DMA1_Channel2_IRQHandler
-                0x00000000080037e0                CAN1_SCE_IRQHandler
-                0x00000000080037e0                FLASH_IRQHandler
-                0x00000000080037e0                I2C1_ER_IRQHandler
-                0x00000000080037e0                USBWakeUp_IRQHandler
- *fill*         0x00000000080037e2        0x2 
- .text.__errno  0x00000000080037e4        0xc /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-errno.o)
-                0x00000000080037e4                __errno
+                0x00000000080037f8        0x2 /workspace/DOAN2HH/firmware/build/Master/Core/Startup/startup_stm32f103c8tx.o
+                0x00000000080037f8                RTC_Alarm_IRQHandler
+                0x00000000080037f8                EXTI2_IRQHandler
+                0x00000000080037f8                TIM1_CC_IRQHandler
+                0x00000000080037f8                PVD_IRQHandler
+                0x00000000080037f8                EXTI3_IRQHandler
+                0x00000000080037f8                EXTI0_IRQHandler
+                0x00000000080037f8                I2C2_EV_IRQHandler
+                0x00000000080037f8                ADC1_2_IRQHandler
+                0x00000000080037f8                SPI1_IRQHandler
+                0x00000000080037f8                TAMPER_IRQHandler
+                0x00000000080037f8                DMA1_Channel4_IRQHandler
+                0x00000000080037f8                USART3_IRQHandler
+                0x00000000080037f8                RTC_IRQHandler
+                0x00000000080037f8                DMA1_Channel7_IRQHandler
+                0x00000000080037f8                CAN1_RX1_IRQHandler
+                0x00000000080037f8                TIM4_IRQHandler
+                0x00000000080037f8                I2C1_EV_IRQHandler
+                0x00000000080037f8                DMA1_Channel6_IRQHandler
+                0x00000000080037f8                TIM3_IRQHandler
+                0x00000000080037f8                RCC_IRQHandler
+                0x00000000080037f8                TIM1_TRG_COM_IRQHandler
+                0x00000000080037f8                DMA1_Channel1_IRQHandler
+                0x00000000080037f8                Default_Handler
+                0x00000000080037f8                EXTI9_5_IRQHandler
+                0x00000000080037f8                SPI2_IRQHandler
+                0x00000000080037f8                DMA1_Channel5_IRQHandler
+                0x00000000080037f8                EXTI4_IRQHandler
+                0x00000000080037f8                USB_LP_CAN1_RX0_IRQHandler
+                0x00000000080037f8                USB_HP_CAN1_TX_IRQHandler
+                0x00000000080037f8                DMA1_Channel3_IRQHandler
+                0x00000000080037f8                TIM1_UP_IRQHandler
+                0x00000000080037f8                WWDG_IRQHandler
+                0x00000000080037f8                TIM2_IRQHandler
+                0x00000000080037f8                TIM1_BRK_IRQHandler
+                0x00000000080037f8                EXTI1_IRQHandler
+                0x00000000080037f8                USART2_IRQHandler
+                0x00000000080037f8                I2C2_ER_IRQHandler
+                0x00000000080037f8                DMA1_Channel2_IRQHandler
+                0x00000000080037f8                CAN1_SCE_IRQHandler
+                0x00000000080037f8                FLASH_IRQHandler
+                0x00000000080037f8                I2C1_ER_IRQHandler
+                0x00000000080037f8                USBWakeUp_IRQHandler
+ *fill*         0x00000000080037fa        0x2 
+ .text.__errno  0x00000000080037fc        0xc /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-errno.o)
+                0x00000000080037fc                __errno
  .text.__libc_init_array
-                0x00000000080037f0       0x48 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
-                0x00000000080037f0                __libc_init_array
- .text.memcpy   0x0000000008003838       0x16 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
-                0x0000000008003838                memcpy
- .text.memset   0x000000000800384e       0x10 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
-                0x000000000800384e                memset
- *fill*         0x000000000800385e        0x2 
+                0x0000000008003808       0x48 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
+                0x0000000008003808                __libc_init_array
+ .text.memcpy   0x0000000008003850       0x16 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
+                0x0000000008003850                memcpy
+ .text.memset   0x0000000008003866       0x10 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
+                0x0000000008003866                memset
+ *fill*         0x0000000008003876        0x2 
  .text.snprintf
-                0x0000000008003860       0x68 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-snprintf.o)
-                0x0000000008003860                snprintf
-                0x0000000008003860                sniprintf
+                0x0000000008003878       0x68 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-snprintf.o)
+                0x0000000008003878                snprintf
+                0x0000000008003878                sniprintf
  .text.__ssputs_r
-                0x00000000080038c8       0xb4 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
-                0x00000000080038c8                __ssputs_r
+                0x00000000080038e0       0xb4 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x00000000080038e0                __ssputs_r
  .text._svfprintf_r
-                0x000000000800397c      0x1f0 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
-                0x000000000800397c                _svfprintf_r
-                0x000000000800397c                _svfiprintf_r
+                0x0000000008003994      0x1f0 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000008003994                _svfprintf_r
+                0x0000000008003994                _svfiprintf_r
  .text._printf_common
-                0x0000000008003b6c       0xec /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000008003b6c                _printf_common
+                0x0000000008003b84       0xec /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008003b84                _printf_common
  .text._printf_i
-                0x0000000008003c58      0x224 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000008003c58                _printf_i
- .text.memchr   0x0000000008003e7c       0x1c /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memchr-stub.o)
-                0x0000000008003e7c                memchr
- .text.memmove  0x0000000008003e98       0x32 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memmove.o)
-                0x0000000008003e98                memmove
- *fill*         0x0000000008003eca        0x2 
- .text._free_r  0x0000000008003ecc       0x98 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o)
-                0x0000000008003ecc                _free_r
+                0x0000000008003c70      0x224 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008003c70                _printf_i
+ .text.memchr   0x0000000008003e94       0x1c /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memchr-stub.o)
+                0x0000000008003e94                memchr
+ .text.memmove  0x0000000008003eb0       0x32 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memmove.o)
+                0x0000000008003eb0                memmove
+ *fill*         0x0000000008003ee2        0x2 
+ .text._free_r  0x0000000008003ee4       0x98 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-freer.o)
+                0x0000000008003ee4                _free_r
  .text._malloc_r
-                0x0000000008003f64       0xb4 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000008003f64                _malloc_r
+                0x0000000008003f7c       0xb4 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000008003f7c                _malloc_r
  .text._realloc_r
-                0x0000000008004018       0x4c /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o)
-                0x0000000008004018                _realloc_r
- .text._sbrk_r  0x0000000008004064       0x20 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o)
-                0x0000000008004064                _sbrk_r
+                0x0000000008004030       0x4c /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-reallocr.o)
+                0x0000000008004030                _realloc_r
+ .text._sbrk_r  0x000000000800407c       0x20 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-sbrkr.o)
+                0x000000000800407c                _sbrk_r
  .text.__malloc_lock
-                0x0000000008004084        0xc /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
-                0x0000000008004084                __malloc_lock
+                0x000000000800409c        0xc /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
+                0x000000000800409c                __malloc_lock
  .text.__malloc_unlock
-                0x0000000008004090        0xc /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
-                0x0000000008004090                __malloc_unlock
+                0x00000000080040a8        0xc /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-mlock.o)
+                0x00000000080040a8                __malloc_unlock
  .text._malloc_usable_size_r
-                0x000000000800409c       0x10 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-msizer.o)
-                0x000000000800409c                _malloc_usable_size_r
+                0x00000000080040b4       0x10 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-msizer.o)
+                0x00000000080040b4                _malloc_usable_size_r
  .text.__retarget_lock_acquire_recursive
-                0x00000000080040ac        0x2 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-lock.o)
-                0x00000000080040ac                __retarget_lock_acquire_recursive
+                0x00000000080040c4        0x2 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-lock.o)
+                0x00000000080040c4                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x00000000080040ae        0x2 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-lock.o)
-                0x00000000080040ae                __retarget_lock_release_recursive
+                0x00000000080040c6        0x2 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-lock.o)
+                0x00000000080040c6                __retarget_lock_release_recursive
  *(.glue_7)
- .glue_7        0x00000000080040b0        0x0 linker stubs
+ .glue_7        0x00000000080040c8        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x00000000080040b0        0x0 linker stubs
+ .glue_7t       0x00000000080040c8        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x00000000080040b0        0x0 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+ .eh_frame      0x00000000080040c8        0x0 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
  *(.init)
- .init          0x00000000080040b0        0x4 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crti.o
-                0x00000000080040b0                _init
- .init          0x00000000080040b4        0x8 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
+ .init          0x00000000080040c8        0x4 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crti.o
+                0x00000000080040c8                _init
+ .init          0x00000000080040cc        0x8 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
  *(.fini)
- .fini          0x00000000080040bc        0x4 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crti.o
-                0x00000000080040bc                _fini
- .fini          0x00000000080040c0        0x8 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
-                0x00000000080040c8                . = ALIGN (0x4)
-                0x00000000080040c8                _etext = .
+ .fini          0x00000000080040d4        0x4 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crti.o
+                0x00000000080040d4                _fini
+ .fini          0x00000000080040d8        0x8 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
+                0x00000000080040e0                . = ALIGN (0x4)
+                0x00000000080040e0                _etext = .
 
-.vfp11_veneer   0x00000000080040c8        0x0
- .vfp11_veneer  0x00000000080040c8        0x0 linker stubs
+.vfp11_veneer   0x00000000080040e0        0x0
+ .vfp11_veneer  0x00000000080040e0        0x0 linker stubs
 
-.v4_bx          0x00000000080040c8        0x0
- .v4_bx         0x00000000080040c8        0x0 linker stubs
+.v4_bx          0x00000000080040e0        0x0
+ .v4_bx         0x00000000080040e0        0x0 linker stubs
 
-.iplt           0x00000000080040c8        0x0
- .iplt          0x00000000080040c8        0x0 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+.iplt           0x00000000080040e0        0x0
+ .iplt          0x00000000080040e0        0x0 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
 
-.rodata         0x00000000080040c8      0x144
-                0x00000000080040c8                . = ALIGN (0x4)
+.rodata         0x00000000080040e0      0x144
+                0x00000000080040e0                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x00000000080040c8       0x10 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .rodata        0x00000000080040e0       0x10 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
  *(.rodata*)
  .rodata.rowAddress.6377
-                0x00000000080040d8        0x4 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
+                0x00000000080040f0        0x4 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
  .rodata.FinishCommand.str1.1
-                0x00000000080040dc        0x3 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x00000000080040f4        0x3 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .rodata.RequestCommand.str1.1
-                0x00000000080040df       0x30 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x00000000080040f7       0x30 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .rodata.SendResult.str1.1
-                0x000000000800410f       0x1a /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008004127       0x1a /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
  .rodata.StoreResult.str1.1
-                0x0000000008004129       0x1a /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008004141       0x1a /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
                                           0x3 (size before relaxing)
  .rodata.main.str1.1
-                0x0000000008004129       0x97 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+                0x0000000008004141       0x97 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
                                          0x98 (size before relaxing)
  .rodata.AHBPrescTable
-                0x00000000080041c0       0x10 /workspace/DOAN2HH/firmware/build/Master/Core/Src/system_stm32f1xx.o
-                0x00000000080041c0                AHBPrescTable
+                0x00000000080041d8       0x10 /workspace/DOAN2HH/firmware/build/Master/Core/Src/system_stm32f1xx.o
+                0x00000000080041d8                AHBPrescTable
  .rodata.APBPrescTable
-                0x00000000080041d0        0x8 /workspace/DOAN2HH/firmware/build/Master/Core/Src/system_stm32f1xx.o
-                0x00000000080041d0                APBPrescTable
+                0x00000000080041e8        0x8 /workspace/DOAN2HH/firmware/build/Master/Core/Src/system_stm32f1xx.o
+                0x00000000080041e8                APBPrescTable
  .rodata._svfprintf_r.str1.1
-                0x00000000080041d8       0x11 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x00000000080041f0       0x11 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-svfprintf.o)
  .rodata._printf_i.str1.1
-                0x00000000080041e9       0x22 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x000000000800420c                . = ALIGN (0x4)
- *fill*         0x000000000800420b        0x1 
+                0x0000000008004201       0x22 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008004224                . = ALIGN (0x4)
+ *fill*         0x0000000008004223        0x1 
 
-.rel.dyn        0x000000000800420c        0x0
- .rel.iplt      0x000000000800420c        0x0 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+.rel.dyn        0x0000000008004224        0x0
+ .rel.iplt      0x0000000008004224        0x0 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
 
-.ARM.extab      0x000000000800420c        0x0
-                0x000000000800420c                . = ALIGN (0x4)
+.ARM.extab      0x0000000008004224        0x0
+                0x0000000008004224                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000000000800420c                . = ALIGN (0x4)
+                0x0000000008004224                . = ALIGN (0x4)
 
-.ARM            0x000000000800420c        0x0
-                0x000000000800420c                . = ALIGN (0x4)
-                0x000000000800420c                __exidx_start = .
+.ARM            0x0000000008004224        0x0
+                0x0000000008004224                . = ALIGN (0x4)
+                0x0000000008004224                __exidx_start = .
  *(.ARM.exidx*)
-                0x000000000800420c                __exidx_end = .
-                0x000000000800420c                . = ALIGN (0x4)
+                0x0000000008004224                __exidx_end = .
+                0x0000000008004224                . = ALIGN (0x4)
 
-.preinit_array  0x000000000800420c        0x0
-                0x000000000800420c                . = ALIGN (0x4)
-                0x000000000800420c                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008004224        0x0
+                0x0000000008004224                . = ALIGN (0x4)
+                0x0000000008004224                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x000000000800420c                PROVIDE (__preinit_array_end = .)
-                0x000000000800420c                . = ALIGN (0x4)
+                0x0000000008004224                PROVIDE (__preinit_array_end = .)
+                0x0000000008004224                . = ALIGN (0x4)
 
-.init_array     0x000000000800420c        0x4
-                0x000000000800420c                . = ALIGN (0x4)
-                0x000000000800420c                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008004224        0x4
+                0x0000000008004224                . = ALIGN (0x4)
+                0x0000000008004224                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x000000000800420c        0x4 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
-                0x0000000008004210                PROVIDE (__init_array_end = .)
-                0x0000000008004210                . = ALIGN (0x4)
+ .init_array    0x0000000008004224        0x4 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+                0x0000000008004228                PROVIDE (__init_array_end = .)
+                0x0000000008004228                . = ALIGN (0x4)
 
-.fini_array     0x0000000008004210        0x4
-                0x0000000008004210                . = ALIGN (0x4)
+.fini_array     0x0000000008004228        0x4
+                0x0000000008004228                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008004210        0x4 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+ .fini_array    0x0000000008004228        0x4 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0000000008004214                . = ALIGN (0x4)
-                0x0000000008004214                _sidata = LOADADDR (.data)
+                0x000000000800422c                . = ALIGN (0x4)
+                0x000000000800422c                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0x80 load address 0x0000000008004214
+.data           0x0000000020000000       0x80 load address 0x000000000800422c
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -3554,17 +3554,17 @@ LOAD /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v
                 0x0000000020000080                _edata = .
 
 .tm_clone_table
-                0x0000000020000080        0x0 load address 0x0000000008004294
+                0x0000000020000080        0x0 load address 0x00000000080042ac
  .tm_clone_table
                 0x0000000020000080        0x0 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
  .tm_clone_table
                 0x0000000020000080        0x0 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtend.o
 
-.igot.plt       0x0000000020000080        0x0 load address 0x0000000008004294
+.igot.plt       0x0000000020000080        0x0 load address 0x00000000080042ac
  .igot.plt      0x0000000020000080        0x0 /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
                 0x0000000020000080                . = ALIGN (0x4)
 
-.bss            0x0000000020000080      0x948 load address 0x0000000008004294
+.bss            0x0000000020000080      0x948 load address 0x00000000080042ac
                 0x0000000020000080                _sbss = .
                 0x0000000020000080                __bss_start__ = _sbss
  *(.bss)
@@ -3682,7 +3682,7 @@ LOAD /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v
                 0x00000000200009c8                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x00000000200009c8      0x600 load address 0x0000000008004294
+                0x00000000200009c8      0x600 load address 0x00000000080042ac
                 0x00000000200009c8                . = ALIGN (0x8)
                 0x00000000200009c8                PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
@@ -3786,25 +3786,25 @@ LOAD /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v
                 0x0000000000000757       0x1d /workspace/doan2hh-env/toolchain/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
 OUTPUT(/workspace/DOAN2HH/firmware/build/Master/Master.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x13706
+.debug_info     0x0000000000000000    0x13723
  .debug_info    0x0000000000000000      0x498 /workspace/DOAN2HH/firmware/build/Master/Core/Src/boot_counter.o
  .debug_info    0x0000000000000498     0x1494 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
  .debug_info    0x000000000000192c     0x1dd4 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
- .debug_info    0x0000000000003700     0x3ba9 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
- .debug_info    0x00000000000072a9     0x112c /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_hal_msp.o
- .debug_info    0x00000000000083d5      0x27e /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
- .debug_info    0x0000000000008653      0x941 /workspace/DOAN2HH/firmware/build/Master/Core/Src/sysmem.o
- .debug_info    0x0000000000008f94      0x29d /workspace/DOAN2HH/firmware/build/Master/Core/Src/system_stm32f1xx.o
- .debug_info    0x0000000000009231      0x7e8 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_info    0x0000000000009a19      0xcaf /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_info    0x000000000000a6c8      0x6e6 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
- .debug_info    0x000000000000adae      0xbaa /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
- .debug_info    0x000000000000b958      0x6ac /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_info    0x000000000000c004     0x367d /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
- .debug_info    0x000000000000f681      0x9e6 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_info    0x0000000000010067     0x1c64 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
- .debug_info    0x0000000000011ccb     0x1a19 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
- .debug_info    0x00000000000136e4       0x22 /workspace/DOAN2HH/firmware/build/Master/Core/Startup/startup_stm32f103c8tx.o
+ .debug_info    0x0000000000003700     0x3bc6 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+ .debug_info    0x00000000000072c6     0x112c /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_hal_msp.o
+ .debug_info    0x00000000000083f2      0x27e /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
+ .debug_info    0x0000000000008670      0x941 /workspace/DOAN2HH/firmware/build/Master/Core/Src/sysmem.o
+ .debug_info    0x0000000000008fb1      0x29d /workspace/DOAN2HH/firmware/build/Master/Core/Src/system_stm32f1xx.o
+ .debug_info    0x000000000000924e      0x7e8 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_info    0x0000000000009a36      0xcaf /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_info    0x000000000000a6e5      0x6e6 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
+ .debug_info    0x000000000000adcb      0xbaa /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
+ .debug_info    0x000000000000b975      0x6ac /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_info    0x000000000000c021     0x367d /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+ .debug_info    0x000000000000f69e      0x9e6 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_info    0x0000000000010084     0x1c64 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
+ .debug_info    0x0000000000011ce8     0x1a19 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+ .debug_info    0x0000000000013701       0x22 /workspace/DOAN2HH/firmware/build/Master/Core/Startup/startup_stm32f103c8tx.o
 
 .debug_abbrev   0x0000000000000000     0x2fb9
  .debug_abbrev  0x0000000000000000      0x1e6 /workspace/DOAN2HH/firmware/build/Master/Core/Src/boot_counter.o
@@ -3826,23 +3826,23 @@ OUTPUT(/workspace/DOAN2HH/firmware/build/Master/Master.elf elf32-littlearm)
  .debug_abbrev  0x0000000000002c4c      0x35b /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
  .debug_abbrev  0x0000000000002fa7       0x12 /workspace/DOAN2HH/firmware/build/Master/Core/Startup/startup_stm32f103c8tx.o
 
-.debug_loc      0x0000000000000000     0x97f4
+.debug_loc      0x0000000000000000     0x97f7
  .debug_loc     0x0000000000000000      0x206 /workspace/DOAN2HH/firmware/build/Master/Core/Src/boot_counter.o
- .debug_loc     0x0000000000000206      0x395 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
- .debug_loc     0x000000000000059b      0x311 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
- .debug_loc     0x00000000000008ac     0x1718 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
- .debug_loc     0x0000000000001fc4      0x108 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_hal_msp.o
- .debug_loc     0x00000000000020cc       0x4a /workspace/DOAN2HH/firmware/build/Master/Core/Src/sysmem.o
- .debug_loc     0x0000000000002116       0xcd /workspace/DOAN2HH/firmware/build/Master/Core/Src/system_stm32f1xx.o
- .debug_loc     0x00000000000021e3      0x115 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_loc     0x00000000000022f8      0x457 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_loc     0x000000000000274f      0x326 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
- .debug_loc     0x0000000000002a75      0x6b5 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
- .debug_loc     0x000000000000312a      0x317 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_loc     0x0000000000003441     0x328d /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
- .debug_loc     0x00000000000066ce      0x486 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_loc     0x0000000000006b54     0x15a2 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
- .debug_loc     0x00000000000080f6     0x16fe /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+ .debug_loc     0x0000000000000206      0x3a4 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
+ .debug_loc     0x00000000000005aa      0x311 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
+ .debug_loc     0x00000000000008bb     0x170c /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+ .debug_loc     0x0000000000001fc7      0x108 /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_hal_msp.o
+ .debug_loc     0x00000000000020cf       0x4a /workspace/DOAN2HH/firmware/build/Master/Core/Src/sysmem.o
+ .debug_loc     0x0000000000002119       0xcd /workspace/DOAN2HH/firmware/build/Master/Core/Src/system_stm32f1xx.o
+ .debug_loc     0x00000000000021e6      0x115 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_loc     0x00000000000022fb      0x457 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_loc     0x0000000000002752      0x326 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
+ .debug_loc     0x0000000000002a78      0x6b5 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
+ .debug_loc     0x000000000000312d      0x317 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_loc     0x0000000000003444     0x328d /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+ .debug_loc     0x00000000000066d1      0x486 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_loc     0x0000000000006b57     0x15a2 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
+ .debug_loc     0x00000000000080f9     0x16fe /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
 
 .debug_aranges  0x0000000000000000      0xb18
  .debug_aranges
@@ -3988,25 +3988,25 @@ OUTPUT(/workspace/DOAN2HH/firmware/build/Master/Master.elf elf32-littlearm)
  .debug_macro   0x0000000000017fe3      0x1aa /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
  .debug_macro   0x000000000001818d      0x1a3 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
 
-.debug_line     0x0000000000000000     0xa970
+.debug_line     0x0000000000000000     0xa973
  .debug_line    0x0000000000000000      0x5de /workspace/DOAN2HH/firmware/build/Master/Core/Src/boot_counter.o
  .debug_line    0x00000000000005de      0x763 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lcd2004.o
  .debug_line    0x0000000000000d41      0x929 /workspace/DOAN2HH/firmware/build/Master/Core/Src/lora.o
- .debug_line    0x000000000000166a      0xe65 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
- .debug_line    0x00000000000024cf      0x64a /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_hal_msp.o
- .debug_line    0x0000000000002b19      0x5cc /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
- .debug_line    0x00000000000030e5      0x329 /workspace/DOAN2HH/firmware/build/Master/Core/Src/sysmem.o
- .debug_line    0x000000000000340e      0x577 /workspace/DOAN2HH/firmware/build/Master/Core/Src/system_stm32f1xx.o
- .debug_line    0x0000000000003985      0x724 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_line    0x00000000000040a9      0x76b /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_line    0x0000000000004814      0x79d /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
- .debug_line    0x0000000000004fb1      0x7c8 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
- .debug_line    0x0000000000005779      0x6e6 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_line    0x0000000000005e5f     0x220f /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
- .debug_line    0x000000000000806e      0x886 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_line    0x00000000000088f4      0xf4f /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
- .debug_line    0x0000000000009843     0x1086 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
- .debug_line    0x000000000000a8c9       0xa7 /workspace/DOAN2HH/firmware/build/Master/Core/Startup/startup_stm32f103c8tx.o
+ .debug_line    0x000000000000166a      0xe68 /workspace/DOAN2HH/firmware/build/Master/Core/Src/main.o
+ .debug_line    0x00000000000024d2      0x64a /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_hal_msp.o
+ .debug_line    0x0000000000002b1c      0x5cc /workspace/DOAN2HH/firmware/build/Master/Core/Src/stm32f1xx_it.o
+ .debug_line    0x00000000000030e8      0x329 /workspace/DOAN2HH/firmware/build/Master/Core/Src/sysmem.o
+ .debug_line    0x0000000000003411      0x577 /workspace/DOAN2HH/firmware/build/Master/Core/Src/system_stm32f1xx.o
+ .debug_line    0x0000000000003988      0x724 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_line    0x00000000000040ac      0x76b /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_line    0x0000000000004817      0x79d /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o
+ .debug_line    0x0000000000004fb4      0x7c8 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o
+ .debug_line    0x000000000000577c      0x6e6 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_line    0x0000000000005e62     0x220f /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+ .debug_line    0x0000000000008071      0x886 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_line    0x00000000000088f7      0xf4f /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
+ .debug_line    0x0000000000009846     0x1086 /workspace/DOAN2HH/firmware/build/Master/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+ .debug_line    0x000000000000a8cc       0xa7 /workspace/DOAN2HH/firmware/build/Master/Core/Startup/startup_stm32f103c8tx.o
 
 .debug_str      0x0000000000000000    0x88278
  .debug_str     0x0000000000000000    0x7f2d5 /workspace/DOAN2HH/firmware/build/Master/Core/Src/boot_counter.o

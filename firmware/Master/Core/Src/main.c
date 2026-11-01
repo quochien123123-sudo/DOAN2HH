@@ -520,9 +520,13 @@ static void LCDProcess(void)
 {
     uint32_t now = HAL_GetTick();
     if (!Due(now, nextLCD) || !LCD2004_IsReady() || owner.job != RF_NONE || HaveCommands()) return;
-    unsigned i;
-    for (i = 0; i < NODE_COUNT; ++i)
-        if (Due(now + 60U, nodes[i].nextPoll)) return;
+    /* Only reserve a poll window when the radio can actually use it.
+     * Failed radio/boot initialization must still allow the LCD to show ERR. */
+    if (radioReady && LoRa_IsReady()) {
+        unsigned i;
+        for (i = 0; i < NODE_COUNT; ++i)
+            if (Due(now + 60U, nodes[i].nextPoll)) return;
+    }
     nextLCD = now + 150U;
     char line[21];
     if (lcdRow < NODE_COUNT) {

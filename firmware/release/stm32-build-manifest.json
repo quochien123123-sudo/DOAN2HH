@@ -1,0 +1,70 @@
+{
+  "Master": {
+    "node_id": null,
+    "artifacts": {
+      "Master.elf": {
+        "size": 997552,
+        "sha256": "9c3f366e5c1d8795f018c8658558c16659e6d6cdb77930803c13fda611728674"
+      },
+      "Master.bin": {
+        "size": 17068,
+        "sha256": "080968e6b82157aee6cdce011b9692242aacbe349d0ce6c3e6074d3e034b80d9"
+      },
+      "Master.hex": {
+        "size": 48097,
+        "sha256": "170e491ddebf83a7446cebe1c6d5b4144cacbb578211bb072904e9ad002a7666"
+      }
+    }
+  },
+  "Slave1": {
+    "node_id": 1,
+    "artifacts": {
+      "Slave1.elf": {
+        "size": 1017156,
+        "sha256": "6981ff4ffb9acfd7232268034fa5f3ada5e2cd21e60a6b2a552a534aa63b76d5"
+      },
+      "Slave1.bin": {
+        "size": 17724,
+        "sha256": "4f42ce740217a568a23b09d568a3a04a71cefb1612175dffd32d29b89af94706"
+      },
+      "Slave1.hex": {
+        "size": 49929,
+        "sha256": "b30686e8a38371fb9d96f86de6a2b6ef9b041b83f0357aa5d47deb72708c0241"
+      }
+    }
+  },
+  "Slave2": {
+    "node_id": 2,
+    "artifacts": {
+      "Slave2.elf": {
+        "size": 1016936,
+        "sha256": "004278179de1eabe889626827033e8885e33c2d3949a27f3c63c83258a671210"
+      },
+      "Slave2.bin": {
+        "size": 17720,
+        "sha256": "1afa73ab1095ca31947521965a49fefddfd5d5ccdd2f220496c41f0758dfe9b3"
+      },
+      "Slave2.hex": {
+        "size": 49921,
+        "sha256": "16e7fce6caffbe77996e026e497be813134a9759eb811e28fc94ecfb1d3ff4bd"
+      }
+    }
+  },
+  "Slave3": {
+    "node_id": 3,
+    "artifacts": {
+      "Slave3.elf": {
+        "size": 1017172,
+        "sha256": "90caefb6ae73a945ef2cdacb4a77e5f02700bbbe701186cd1a62d6c0d457536e"
+      },
+      "Slave3.bin": {
+        "size": 17708,
+        "sha256": "8b120f4866432f3a97f549ab5f95be71d655809a616098531509422af234e213"
+      },
+      "Slave3.hex": {
+        "size": 49884,
+        "sha256": "e5b76dcfd6acdbc09bdfc0d2d64086439b14a88b293290f7469361bad59afd38"
+      }
+    }
+  }
+}

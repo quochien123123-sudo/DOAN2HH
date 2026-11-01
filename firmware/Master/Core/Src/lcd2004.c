@@ -96,6 +96,9 @@ uint8_t LCD2004_Init(I2C_HandleTypeDef *hi2c)
         return 0U;
     }
 
+    /* The PCF8574/LCD supply must settle before the first address probe. */
+    HAL_Delay(50);
+
     for (i = 0U; i < 2U; i++)
     {
         uint16_t halAddress =
@@ -115,8 +118,6 @@ uint8_t LCD2004_Init(I2C_HandleTypeDef *hi2c)
     {
         return 0U;
     }
-
-    HAL_Delay(50);
 
     LCD2004_Write4Bits(0x30U, 0U);
     HAL_Delay(5);
